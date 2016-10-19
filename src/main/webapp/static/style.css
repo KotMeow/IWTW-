@@ -1,0 +1,28 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #F8F9F9;
+}
+
+.navbar-brand {
+	font-family: 'Yellowtail', cursive;
+	font-size: 25px;
+}
+
+.navbar-primary {
+	border-radius: 0;
+	border-bottom: solid #50A8E1 1px;
+}
+.glyphicon-star-empty {
+	color: #AFB1B9;
+	font-size: 1.2em;
+	margin-left: 5px;
+}
+
+.glyphicon-star-empty.active {
+	color: gold;
+}
+
+.jumbotron {
+	background-color: #50A8E1;
+}
+
