@@ -14,9 +14,6 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_choose;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_when_test;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_otherwise;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -27,17 +24,11 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
   public void _jspInit() {
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_choose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_when_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_otherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_if_test.release();
     _jspx_tagPool_c_forEach_var_items.release();
-    _jspx_tagPool_c_choose.release();
-    _jspx_tagPool_c_when_test.release();
-    _jspx_tagPool_c_otherwise.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -129,7 +120,7 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
         return;
       out.write("\n");
       out.write("\n");
-      out.write("<div class=\"container-fluid\">\n");
+      out.write("<div class=\"container\">\n");
       com.example.iwtw.service.StorageService storage = null;
       synchronized (application) {
         storage = (com.example.iwtw.service.StorageService) _jspx_page_context.getAttribute("storage", PageContext.APPLICATION_SCOPE);
@@ -142,6 +133,7 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\n");
+      out.write("</div>\n");
       out.write("</div>\n");
       out.write(" <script>\n");
       out.write("        $('#confirm-delete').on('show.bs.modal', function(e) {\n");
@@ -211,39 +203,19 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("  <div class=\"col-sm-4 col-md-2\">\n");
-          out.write("    <div class=\"thumbnail\">\n");
-          out.write("      <img class=\"img-responsive\" src=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getCoverUrl()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("  <a href=\"editMovie.jsp?id=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\n");
-          out.write("      <div class=\"caption\">\n");
-          out.write("        <h3>");
+          out.write("  <div class=\"item\" style=\"background-image: url('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getCoverUrl()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("')\">\n");
+          out.write("  <div class=\"overlay\">\n");
+          out.write("  <span class=\"item-header\">");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getTitle()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\n");
-          out.write("        <small>\n");
-          out.write("        ");
-          if (_jspx_meth_c_choose_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-            return true;
-          out.write("\n");
-          out.write("        </small>\n");
-          out.write("        </h3>\n");
-          out.write("         <h5>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getGenre()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("<small>  ");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getReleaseYear()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</small></h5>\n");
-          out.write("        <p>\n");
-          out.write("        <a href=\"editMovie.jsp?id=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" class=\"btn btn-primary\" role=\"button\">Edit</a>\n");
-          out.write("         <button class=\"btn btn-danger\" data-href=\"delete.jsp?id=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("\" data-toggle=\"modal\" data-target=\"#confirm-delete\">Delete\n");
-          out.write("       </button>\n");
-          out.write("        </p>\n");
-          out.write("      </div>\n");
-          out.write("    </div>\n");
+          out.write("</span>\n");
           out.write("  </div>\n");
+          out.write("  </div>\n");
+          out.write("  </a>\n");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -260,99 +232,6 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       _jspx_th_c_forEach_0.doFinally();
       _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
     }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_choose_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:choose
-    org.apache.taglibs.standard.tag.common.core.ChooseTag _jspx_th_c_choose_0 = (org.apache.taglibs.standard.tag.common.core.ChooseTag) _jspx_tagPool_c_choose.get(org.apache.taglibs.standard.tag.common.core.ChooseTag.class);
-    _jspx_th_c_choose_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_choose_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    int _jspx_eval_c_choose_0 = _jspx_th_c_choose_0.doStartTag();
-    if (_jspx_eval_c_choose_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("          ");
-        if (_jspx_meth_c_when_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-          return true;
-        out.write("\n");
-        out.write("          ");
-        if (_jspx_meth_c_otherwise_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-          return true;
-        out.write("\n");
-        out.write("        ");
-        int evalDoAfterBody = _jspx_th_c_choose_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_choose_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_choose.reuse(_jspx_th_c_choose_0);
-      return true;
-    }
-    _jspx_tagPool_c_choose.reuse(_jspx_th_c_choose_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_when_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:when
-    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
-    _jspx_th_c_when_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_when_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-    _jspx_th_c_when_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${movie.getIsFavorite() == true}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_when_0 = _jspx_th_c_when_0.doStartTag();
-    if (_jspx_eval_c_when_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("  \n");
-        out.write("            <a href=\"toggleFavorite.jsp?id=");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\"><span class=\"glyphicon glyphicon-star-empty active\" aria-hidden=\"true\"></span></a>\n");
-        out.write("          ");
-        int evalDoAfterBody = _jspx_th_c_when_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_when_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_0);
-      return true;
-    }
-    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_otherwise_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:otherwise
-    org.apache.taglibs.standard.tag.common.core.OtherwiseTag _jspx_th_c_otherwise_0 = (org.apache.taglibs.standard.tag.common.core.OtherwiseTag) _jspx_tagPool_c_otherwise.get(org.apache.taglibs.standard.tag.common.core.OtherwiseTag.class);
-    _jspx_th_c_otherwise_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_otherwise_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-    int _jspx_eval_c_otherwise_0 = _jspx_th_c_otherwise_0.doStartTag();
-    if (_jspx_eval_c_otherwise_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("            <a href=\"toggleFavorite.jsp?id=");
-        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-        out.write("\"><span class=\"glyphicon glyphicon-star-empty\" aria-hidden=\"true\"></span></a>\n");
-        out.write("          ");
-        int evalDoAfterBody = _jspx_th_c_otherwise_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_otherwise_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_otherwise.reuse(_jspx_th_c_otherwise_0);
-      return true;
-    }
-    _jspx_tagPool_c_otherwise.reuse(_jspx_th_c_otherwise_0);
     return false;
   }
 }

@@ -67,35 +67,18 @@
            </div>
 </c:if>
 
-<div class="container-fluid">
+<div class="container">
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application" />
 <c:forEach items="${storage.getAllMovies()}" var="movie">
-  <div class="col-sm-4 col-md-2">
-    <div class="thumbnail">
-      <img class="img-responsive" src="${movie.getCoverUrl()}">
-      <div class="caption">
-        <h3>${movie.getTitle()}
-        <small>
-        <c:choose>
-          <c:when test="${movie.getIsFavorite() == true}">  
-            <a href="toggleFavorite.jsp?id=${storage.getAllMovies().indexOf(movie)}"><span class="glyphicon glyphicon-star-empty active" aria-hidden="true"></span></a>
-          </c:when>
-          <c:otherwise>
-            <a href="toggleFavorite.jsp?id=${storage.getAllMovies().indexOf(movie)}"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></a>
-          </c:otherwise>
-        </c:choose>
-        </small>
-        </h3>
-         <h5>${movie.getGenre()}<small>  ${movie.getReleaseYear()}</small></h5>
-        <p>
-        <a href="editMovie.jsp?id=${storage.getAllMovies().indexOf(movie)}" class="btn btn-primary" role="button">Edit</a>
-         <button class="btn btn-danger" data-href="delete.jsp?id=${storage.getAllMovies().indexOf(movie)}" data-toggle="modal" data-target="#confirm-delete">Delete
-       </button>
-        </p>
-      </div>
-    </div>
+  <a href="editMovie.jsp?id=${storage.getAllMovies().indexOf(movie)}">
+  <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
+  <div class="overlay">
+  <span class="item-header">${movie.getTitle()}</span>
   </div>
+  </div>
+  </a>
 </c:forEach>
+</div>
 </div>
  <script>
         $('#confirm-delete').on('show.bs.modal', function(e) {
