@@ -68,7 +68,6 @@
 </c:if>
 
 <div class="container-fluid">
-
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application" />
 <c:forEach items="${storage.getAllMovies()}" var="movie">
   <div class="col-sm-4 col-md-2">

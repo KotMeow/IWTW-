@@ -130,7 +130,6 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("\n");
       out.write("<div class=\"container-fluid\">\n");
-      out.write("\n");
       com.example.iwtw.service.StorageService storage = null;
       synchronized (application) {
         storage = (com.example.iwtw.service.StorageService) _jspx_page_context.getAttribute("storage", PageContext.APPLICATION_SCOPE);
