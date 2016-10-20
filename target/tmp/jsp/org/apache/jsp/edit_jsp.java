@@ -69,7 +69,7 @@ public final class edit_jsp extends org.apache.jasper.runtime.HttpJspBase
 
 int id = Integer.parseInt(request.getParameter("id"));
 storage.update(id,movie);
-response.sendRedirect("showAllMovies.jsp");
+response.sendRedirect("movieDetails.jsp?id=" + id);
 
 
       out.write('\n');

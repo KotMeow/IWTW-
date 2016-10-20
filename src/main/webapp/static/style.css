@@ -58,3 +58,20 @@ body {
 a:hover {
 	text-decoration: none;
 }
+
+img {
+  width: 400px;
+  height: 550px;
+}
+
+h1.movieTitle {
+  font-size: 500%;
+}
+
+h2 {
+  color: #AFB1B9;
+}
+
+.icon-bar {
+  background-color: #50A8E1;
+}

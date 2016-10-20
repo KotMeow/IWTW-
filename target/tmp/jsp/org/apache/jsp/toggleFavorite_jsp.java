@@ -68,7 +68,8 @@ public final class toggleFavorite_jsp extends org.apache.jasper.runtime.HttpJspB
 
 int id = Integer.parseInt(request.getParameter("id"));
 storage.toggleFavorite(id);
-response.sendRedirect("showAllMovies.jsp");
+response.sendRedirect("movieDetails.jsp?id=" + id);
+
 
       out.write('\n');
     } catch (Throwable t) {

@@ -38,7 +38,7 @@ public class StorageService {
 	}
 
 	public void populateList(){
-		Movie newMovie1 = new Movie("Incepcja", 2010, "Science Fiction", "https://s-media-cache-ak0.pinimg.com/originals/be/81/b0/be81b09191f45334003ee7ae39936ce8.jpg");
+		Movie newMovie1 = new Movie("Inception", 2010, "Science Fiction", "https://s-media-cache-ak0.pinimg.com/originals/be/81/b0/be81b09191f45334003ee7ae39936ce8.jpg");
 		db.add(newMovie1);
 		Movie newMovie2 = new Movie("Deadpool", 2016, "Science Fiction", "http://orig03.deviantart.net/6276/f/2016/018/5/7/deadpool_movie_poster__2_by_tldesignn-d9ofdhf.png");
 		db.add(newMovie2);

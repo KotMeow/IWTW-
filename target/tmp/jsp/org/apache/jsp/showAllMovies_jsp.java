@@ -203,7 +203,7 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("  <a href=\"editMovie.jsp?id=");
+          out.write("  <a href=\"movieDetails.jsp?id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${storage.getAllMovies().indexOf(movie)}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">\n");
           out.write("  <div class=\"item\" style=\"background-image: url('");

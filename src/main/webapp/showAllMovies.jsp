@@ -70,7 +70,7 @@
 <div class="container">
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application" />
 <c:forEach items="${storage.getAllMovies()}" var="movie">
-  <a href="editMovie.jsp?id=${storage.getAllMovies().indexOf(movie)}">
+  <a href="movieDetails.jsp?id=${storage.getAllMovies().indexOf(movie)}">
   <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
   <div class="overlay">
   <span class="item-header">${movie.getTitle()}</span>

@@ -127,7 +127,6 @@ public final class getMovieData_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("</body>\n");
-      out.write("\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

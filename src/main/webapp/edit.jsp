@@ -9,7 +9,7 @@
 <%
 int id = Integer.parseInt(request.getParameter("id"));
 storage.update(id,movie);
-response.sendRedirect("showAllMovies.jsp");
+response.sendRedirect("movieDetails.jsp?id=" + id);
 
 %>
 
