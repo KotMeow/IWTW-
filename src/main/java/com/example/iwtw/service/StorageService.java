@@ -7,7 +7,7 @@ import com.example.iwtw.domain.Movie;
 
 public class StorageService {
 	
-	private List<Movie> db = new ArrayList<Movie>();
+	static private List<Movie> db = new ArrayList<Movie>();
 	
 	public void add(Movie movie){
 		Movie newMovie = new Movie(movie.getTitle(), movie.getReleaseYear(), movie.getGenre(), movie.getCoverUrl());
