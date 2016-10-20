@@ -37,8 +37,8 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-      <div class="col-md-4">
+    <div class="container">
+      <div class="col-md-8">
           <form class="form-horizontal" action="edit.jsp">
               <input type="hidden" name="id" value="<%=id %>" />
               <input type="hidden" name="isFavorite" value="<%=movie.getIsFavorite()%>" />

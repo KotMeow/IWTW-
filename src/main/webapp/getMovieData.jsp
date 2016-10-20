@@ -39,8 +39,8 @@
     </nav>
     <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application" />
     <jsp:useBean id="movie" class="com.example.iwtw.domain.Movie" scope="session" />
-    <div class="container-fluid">
-        <div class="col-md-4">
+ <div class="container">
+      <div class="col-md-8">
             <form class="form-horizontal" action="addMovie.jsp">
                 <div class="form-group">
                     <label class="control-label" for="title">Title</label>

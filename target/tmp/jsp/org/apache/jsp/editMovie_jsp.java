@@ -92,8 +92,8 @@ public final class editMovie_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("    </nav>\n");
-      out.write("    <div class=\"container-fluid\">\n");
-      out.write("      <div class=\"col-md-4\">\n");
+      out.write("    <div class=\"container\">\n");
+      out.write("      <div class=\"col-md-8\">\n");
       out.write("          <form class=\"form-horizontal\" action=\"edit.jsp\">\n");
       out.write("              <input type=\"hidden\" name=\"id\" value=\"");
       out.print(id );

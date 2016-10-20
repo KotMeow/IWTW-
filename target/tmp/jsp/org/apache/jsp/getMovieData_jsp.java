@@ -100,8 +100,8 @@ public final class getMovieData_jsp extends org.apache.jasper.runtime.HttpJspBas
         }
       }
       out.write("\n");
-      out.write("    <div class=\"container-fluid\">\n");
-      out.write("        <div class=\"col-md-4\">\n");
+      out.write(" <div class=\"container\">\n");
+      out.write("      <div class=\"col-md-8\">\n");
       out.write("            <form class=\"form-horizontal\" action=\"addMovie.jsp\">\n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                    <label class=\"control-label\" for=\"title\">Title</label>\n");
