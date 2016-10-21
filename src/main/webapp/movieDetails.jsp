@@ -55,20 +55,11 @@
                 <% } %>
             </small>
         </h1>
-        <h2><%= movie.getGenre()%>
-        </h2>
-        <h2><%= movie.getReleaseYear()%>
-        </h2>
-        <p style="font-size: larger">
-            Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets
-            from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb's
-            rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has
-            also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered
-            a chance at redemption. One last job could give him his life back but only if he can accomplish the
-            impossible - inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the
-            reverse: their task is not to steal an idea but to plant one. If they succeed, it could be the perfect
-            crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that
-            seems to predict their every move. An enemy that only Cobb could have seen coming.
+
+        <h2><%= movie.getGenre()%>, <%= movie.getReleaseYear()%></h2>
+        <h3 class="rating"></h3>
+        <p class="plot" style="font-size: larger">
+
         </p>
         <br>
         <a href="showAllMovies.jsp" class="btn btn-default btn-lg" role="button">Back</a>
@@ -77,14 +68,30 @@
                 data-target="#confirm-delete">Delete
         </button>
 
-
     </div>
 
 </div>
 <script type="application/javascript">
-    $("#confirm-delete").on('show.bs.modal', function (e) {
-        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+    $(function() {
+        $("#confirm-delete").on('show.bs.modal', function (e) {
+            $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+        });
+
+        fetch('http://www.omdbapi.com/?t=<%= movie.getTitle()%>&y=<%= movie.getReleaseYear()%>&plot=full&r=json', {mode: 'cors'})
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (text) {
+                    $('.plot').append(text.Plot);
+                    $('.rating').append(text.imdbRating + '/10');
+
+                    console.log('Request successful');
+                })
+                .catch(function (error) {
+                    log('Request failed', error)
+                });
     });
+
 </script>
 </body>
 </html>

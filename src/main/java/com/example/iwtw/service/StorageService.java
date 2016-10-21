@@ -48,7 +48,7 @@ public class StorageService {
     public void populateList() {
         Movie newMovie1 = new Movie("Inception", 2010, "Science Fiction", "http://payload174.cargocollective.com/1/0/1674/5786135/inception01_regular.jpg");
         db.add(newMovie1);
-        Movie newMovie2 = new Movie("Deadpool", 2016, "Science Fiction", "http://orig03.deviantart.net/6276/f/2016/018/5/7/deadpool_movie_poster__2_by_tldesignn-d9ofdhf.png");
+        Movie newMovie2 = new Movie("Deadpool", 2016, "Science Fiction", "http://www.ew.com/sites/default/files/i/2015/12/13/ew-deadpool-poster.jpg");
         db.add(newMovie2);
         Movie newMovie3 = new Movie("Interstellar", 2014, "Adventure", "https://d3ui957tjb5bqd.cloudfront.net/uploads/2014/11/interstellar-poster-21.jpg");
         db.add(newMovie3);
@@ -60,5 +60,7 @@ public class StorageService {
         db.add(newMovie7);
         Movie newMovie5 = new Movie("The Wolf of Wall Street", 2013, "Comedy", "https://alternativemovieposters.com/wp-content/uploads/2014/02/wolfbg.jpg");
         db.add(newMovie5);
+        Movie newMovie8 = new Movie("Hunt for the Wilderpeople", 2016, "Comedy", "http://cdn.traileraddict.com/content/the-orchard/hunt-for-the-wilderpeople-poster-2.jpg");
+        db.add(newMovie8);
     }
 }

@@ -68,7 +68,7 @@ h1.movieTitle {
   font-size: 300%;
 }
 
-h2 {
+h2, h3 {
   color: #AFB1B9;
 }
 
@@ -82,4 +82,8 @@ h2 {
 
 .details {
     margin-bottom: 100px;
+}
+
+.plot {
+    margin-top: 20px;
 }
