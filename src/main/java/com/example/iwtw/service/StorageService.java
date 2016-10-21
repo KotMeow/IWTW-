@@ -46,9 +46,9 @@ public class StorageService {
 		db.add(newMovie3);
 		Movie newMovie4 = new Movie("Whiplash", 2014, "Drama", "https://mattmulcahey.files.wordpress.com/2015/01/whiplash-poster-cold-open-is-firm-dont-know-artist1.jpg");
 		db.add(newMovie4);
-		Movie newMovie6 = new Movie("The Notebook", 2004, "Romance", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_SX640_SY720_.jpg");
+		Movie newMovie6 = new Movie("The Notebook", 2004, "Drama", "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_SX640_SY720_.jpg");
 		db.add(newMovie6);
-		Movie newMovie7 = new Movie("The Lord of the Rings", 2003, "Fantasy", "http://www.impawards.com/2003/posters/lord_of_the_rings_the_return_of_the_king.jpg");
+		Movie newMovie7 = new Movie("The Lord of the Rings", 2003, "Drama", "http://www.impawards.com/2003/posters/lord_of_the_rings_the_return_of_the_king.jpg");
 		db.add(newMovie7);
 		Movie newMovie5 = new Movie("The Wolf of Wall Street", 2013, "Comedy", "https://s-media-cache-ak0.pinimg.com/originals/7a/51/99/7a5199a401451215ca0411117e771044.jpg");
 		db.add(newMovie5);

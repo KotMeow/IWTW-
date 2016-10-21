@@ -65,7 +65,7 @@ img {
 }
 
 h1.movieTitle {
-  font-size: 500%;
+  font-size: 300%;
 }
 
 h2 {
@@ -76,6 +76,10 @@ h2 {
   background-color: #50A8E1;
 }
 
-#myChart {
+#myChart, #myChart2 {
   margin: 0 auto;
+}
+
+.details {
+    margin-bottom: 100px;
 }

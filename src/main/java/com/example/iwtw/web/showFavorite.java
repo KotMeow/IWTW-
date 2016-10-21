@@ -1,9 +1,7 @@
 package com.example.iwtw.web;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,49 +9,45 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-
 
 import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
 @WebServlet(name = "showFavorite", urlPatterns = "/showFavorite")
 public class showFavorite extends HttpServlet {
-	
-	Movie movie = new Movie();
+
 	StorageService storage = new StorageService();
-	
+
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-	int watched = 0;
-	int unwatched;
-	
+	Map<String, Integer> genre = new HashMap<String, Integer>();
+
+	int favorite = 0;
+	int others;
+
 	if (storage.getAllMovies().size() > 0) { 
 			for (Movie movie : storage.getAllMovies()) {
+				int count = 1;
 				if (movie.getIsFavorite()) {
-					watched++;
+					favorite++;
+
 				}
+				if (genre.containsKey(movie.getGenre())){
+					count = genre.get(movie.getGenre()) + 1;
+				}
+				genre.put(movie.getGenre(), count);
 			}
 		}
 		
-	unwatched = storage.getAllMovies().size() - watched;	
-/*
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		String message = "Kotek";
-		
-		else {
-			out.println("<h1>There are no favorite movies. </h1>");
-		 
-		}*/
-
+	others = storage.getAllMovies().size() - favorite;
 	response.setContentType("text/html");
-    request.setAttribute("watched", watched);
-    request.setAttribute("unwatched", unwatched);
+	request.setAttribute("genre", genre);
+    request.setAttribute("favorite", favorite);
+    request.setAttribute("others", others);
+
     request.getRequestDispatcher("/favorite.jsp").forward(request, response);
 
 }

@@ -22,7 +22,7 @@
             <div class="form-group">
                 <label class="control-label" for="title">Title</label>
                 <input class="form-control" id="title" type="text" name="title" value="<%= movie.getTitle()%>"
-                       maxlength="30" required/>
+                       maxlength="100" required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="releaseYear">Release Year</label>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
-                <input class="form-control" type="text" name="genre" value="<%= movie.getGenre()%>" required/>
+                <input class="form-control" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50" required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>
