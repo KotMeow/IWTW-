@@ -9,7 +9,7 @@
     <jsp:include page="imports.jsp"/>
 </head>
 <body>
-    <jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp"/>
 
 <div class="container-fluid">
 
