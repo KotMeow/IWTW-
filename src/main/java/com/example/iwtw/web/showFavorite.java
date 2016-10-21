@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+
 import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
@@ -23,23 +28,33 @@ public class showFavorite extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-
-		if (storage.getAllMovies().size() > 0) { 
+	int watched = 0;
+	int unwatched = 0;			
+	
+	if (storage.getAllMovies().size() > 0) { 
 			for (Movie movie : storage.getAllMovies()) {
 				if (movie.getIsFavorite() == true) {
-					out.println(movie.getTitle());
-					out.println("<br>");
+					watched++;
 				}
 			}
 		}
+		
+	unwatched = storage.getAllMovies().size() - watched;	
+/*
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		String message = "Kotek";
+		
 		else {
 			out.println("<h1>There are no favorite movies. </h1>");
 		 
-		}
-	}
+		}*/
 
+	response.setContentType("text/html");
+    request.setAttribute("watched", watched);
+    request.setAttribute("unwatched", unwatched);
+    request.getRequestDispatcher("/favorite.jsp").forward(request, response);
+
+}
 }
