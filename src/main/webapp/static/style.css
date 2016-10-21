@@ -30,8 +30,8 @@ body {
 .item {
   display: inline-block;
   background-color: black;
-  width: 200px;
-  height: 270px;
+  width: 270px;
+  height: 340px;
   background-size: cover;
   margin: 5px;
   box-shadow: 2px 2px 5px #AFB1B9;

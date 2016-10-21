@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
-@WebServlet(name = "showFavorite", urlPatterns = "/showFavorite")
+@WebServlet(name = "showDetails", urlPatterns = "/showDetails")
 public class showFavorite extends HttpServlet {
 
 	StorageService storage = new StorageService();

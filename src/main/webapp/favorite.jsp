@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>IWTW | Home</title>
+    <title>IWTW | Library details</title>
     <jsp:include page="imports.jsp"/>
 </head>
 <body>

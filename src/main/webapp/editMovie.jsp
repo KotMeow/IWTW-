@@ -1,18 +1,20 @@
 <%@page import="com.example.iwtw.domain.Movie" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
+<% int id = Integer.parseInt(request.getParameter("id"));
+    Movie movie = storage.getAllMovies().get(id); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <jsp:include page="imports.jsp"/>
-    <title>IWTW | Edit</title>
+    <title>IWTW | Edit <%=movie.getTitle()%>
+    </title>
 </head>
 
 <body>
-<jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
-<% int id = Integer.parseInt(request.getParameter("id"));
-    Movie movie = storage.getAllMovies().get(id); %>
+
 <jsp:include page="navbar.jsp"/>
 <div class="container">
     <div class="col-md-8">
@@ -31,7 +33,8 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
-                <input class="form-control" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50" required/>
+                <input class="form-control" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50"
+                       required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>

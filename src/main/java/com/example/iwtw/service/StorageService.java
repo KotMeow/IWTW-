@@ -46,7 +46,7 @@ public class StorageService {
     }
 
     public void populateList() {
-        Movie newMovie1 = new Movie("Inception", 2010, "Science Fiction", "https://s-media-cache-ak0.pinimg.com/originals/be/81/b0/be81b09191f45334003ee7ae39936ce8.jpg");
+        Movie newMovie1 = new Movie("Inception", 2010, "Science Fiction", "http://payload174.cargocollective.com/1/0/1674/5786135/inception01_regular.jpg");
         db.add(newMovie1);
         Movie newMovie2 = new Movie("Deadpool", 2016, "Science Fiction", "http://orig03.deviantart.net/6276/f/2016/018/5/7/deadpool_movie_poster__2_by_tldesignn-d9ofdhf.png");
         db.add(newMovie2);
@@ -58,7 +58,7 @@ public class StorageService {
         db.add(newMovie6);
         Movie newMovie7 = new Movie("The Lord of the Rings", 2003, "Drama", "http://www.impawards.com/2003/posters/lord_of_the_rings_the_return_of_the_king.jpg");
         db.add(newMovie7);
-        Movie newMovie5 = new Movie("The Wolf of Wall Street", 2013, "Comedy", "https://s-media-cache-ak0.pinimg.com/originals/7a/51/99/7a5199a401451215ca0411117e771044.jpg");
+        Movie newMovie5 = new Movie("The Wolf of Wall Street", 2013, "Comedy", "https://alternativemovieposters.com/wp-content/uploads/2014/02/wolfbg.jpg");
         db.add(newMovie5);
     }
 }

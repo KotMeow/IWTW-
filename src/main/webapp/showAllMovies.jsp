@@ -2,7 +2,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<jsp:include page="navbar.jsp"/>
+<jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,8 +12,7 @@
     <title>IWTW | Library</title>
 </head>
 <body>
-<jsp:include page="navbar.jsp"/>
-<jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
+
 <c:if test="${storage.getAllMovies().size() == 0}">
     <div class="container-fluid">
         <h1>Library seems to be empty</h1>

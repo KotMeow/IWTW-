@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="showAllMovies.jsp">Library</a></li>
-                <li><a href="showFavorite">Favorites</a></li>
+                <li><a href="showDetails">Details</a></li>
                 <li><a href="addMovie.jsp">Add movie</a></li>
             </ul>
         </div>

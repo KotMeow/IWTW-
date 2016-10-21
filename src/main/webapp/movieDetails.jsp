@@ -1,18 +1,19 @@
 <%@page import="com.example.iwtw.domain.Movie" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <jsp:include page="imports.jsp"/>
-    <title>IWTW | Edit</title>
-</head>
-
-<body>
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
 <% int id = Integer.parseInt(request.getParameter("id"));
     Movie movie = storage.getAllMovies().get(id); %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <jsp:include page="imports.jsp"/>
+    <title>IWTW | <%=movie.getTitle()%>
+    </title>
+</head>
+
+<body>
+
 <jsp:include page="navbar.jsp"/>
 
 <div class="modal fade" id="confirm-delete" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -70,10 +71,13 @@
             seems to predict their every move. An enemy that only Cobb could have seen coming.
         </p>
         <br>
+        <a href="showAllMovies.jsp" class="btn btn-default btn-lg" role="button">Back</a>
         <a href="editMovie.jsp?id=<%= id %>" class="btn btn-primary btn-lg" role="button">Edit</a>
         <button class="btn btn-danger btn-lg" data-href="delete.jsp?id=<%= id %>" data-toggle="modal"
                 data-target="#confirm-delete">Delete
         </button>
+
+
     </div>
 
 </div>
