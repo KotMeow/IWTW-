@@ -31,13 +31,8 @@ public class showFavorite extends HttpServlet {
 	if (storage.getAllMovies().size() > 0) { 
 			for (Movie movie : storage.getAllMovies()) {
 				int count = 1;
-				if (movie.getIsFavorite()) {
-					favorite++;
-
-				}
-				if (genre.containsKey(movie.getGenre())){
-					count = genre.get(movie.getGenre()) + 1;
-				}
+				if (movie.getIsFavorite()) favorite++;
+				if (genre.containsKey(movie.getGenre())) count = genre.get(movie.getGenre()) + 1;
 				genre.put(movie.getGenre(), count);
 			}
 		}

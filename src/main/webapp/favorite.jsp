@@ -14,9 +14,11 @@
 
 <div class="container-fluid">
     <div class="col-md-6 details">
+        <h1 style="text-align: center">Your favorites movies</h1>
         <canvas id="myChart" width="500" height="500"></canvas>
     </div>
     <div class="col-md-6 details">
+        <h1 style="text-align: center">Your movies by genre</h1>
         <canvas id="myChart2" width="500" height="500"></canvas>
     </div>
 </div>
@@ -51,10 +53,6 @@
         options: {
             maintainAspectRatio: true,
             responsive: false,
-            title: {
-                display: true,
-                text: 'Your favorites movies'
-            },
             legend: {
                 position: 'bottom'
             }
@@ -98,10 +96,6 @@
         options: {
             maintainAspectRatio: true,
             responsive: false,
-            title: {
-                display: true,
-                text: 'Your movies by genre'
-            },
             legend: {
                 position: 'bottom'
             }
