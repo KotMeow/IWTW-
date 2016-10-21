@@ -19,7 +19,7 @@ import java.net.URL;
 import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
-@WebServlet(urlPatterns = "/showFavorite")
+@WebServlet(name = "showFavorite", urlPatterns = "/showFavorite")
 public class showFavorite extends HttpServlet {
 	
 	Movie movie = new Movie();
@@ -30,11 +30,11 @@ public class showFavorite extends HttpServlet {
 			throws ServletException, IOException {
 
 	int watched = 0;
-	int unwatched = 0;			
+	int unwatched;
 	
 	if (storage.getAllMovies().size() > 0) { 
 			for (Movie movie : storage.getAllMovies()) {
-				if (movie.getIsFavorite() == true) {
+				if (movie.getIsFavorite()) {
 					watched++;
 				}
 			}
