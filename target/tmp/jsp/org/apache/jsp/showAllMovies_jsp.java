@@ -85,7 +85,7 @@ public final class showAllMovies_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("          </div>\n");
       out.write("            <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\n");
       out.write("            <ul  class=\"nav navbar-nav\">\n");
-      out.write("                <li><a>WHO</a></li>\n");
+      out.write("                <li><a href=\"/iwtw/showFavorite\">Watched</a></li>\n");
       out.write("                <li><a href=\"showAllMovies.jsp\">Library</a></li>\n");
       out.write("                <li><a href=\"getMovieData.jsp\">Add movie</a></li>\n");
       out.write("\n");

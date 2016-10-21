@@ -76,6 +76,6 @@ h2 {
   background-color: #50A8E1;
 }
 
-.chart {
-  background-color: blue;
+#myChart {
+  margin: 0 auto;
 }

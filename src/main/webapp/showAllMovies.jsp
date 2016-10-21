@@ -29,7 +29,7 @@
           </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul  class="nav navbar-nav">
-                <li><a>WHO</a></li>
+                <li><a href="/iwtw/showFavorite">Watched</a></li>
                 <li><a href="showAllMovies.jsp">Library</a></li>
                 <li><a href="getMovieData.jsp">Add movie</a></li>
 

@@ -35,17 +35,16 @@
           </div>
       </div>
   </nav>
-  <div class="container">
-  <div class="row">
+  <div class="container-fluid">
+  
+  <div class="col-md-6">
   <h1 class="movieTitle" style="text-align: center; margin-bottom: 40px;">Movies You watched</h1>
-    
-      </div>
-      <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-      <canvas id="myChart" width="400" height="400"></canvas>
-      </div>
-      </div>
+  </div>
+  <div class="col-md-6">
+  <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
 </div>
+
 
   
 
@@ -63,12 +62,12 @@ var data = {
             <%=(Integer)request.getAttribute("unwatched")%>
             ],
             backgroundColor: [
-                "#36A2EB",
-                "#FFCE56"
+                "#50A8E1",
+                "#E0523D"
             ],
             hoverBackgroundColor: [
-                "#36A2EB",
-                "#FFCE56"
+                "#50A8E1",
+                "#E0523D"
             ]
         }]
 }
