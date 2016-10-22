@@ -44,8 +44,10 @@
         <img class="img-responsive" src="<%= movie.getCoverUrl()%>"/>
     </div>
     <div class="col-md-6">
-        <h1 class="movieTitle"><%= movie.getTitle()%>
+        <h1 class="movieTitle"><%= movie.getTitle() %>
+             <div class="rating" style="float: right"></div>
             <small>
+                <%= movie.getReleaseYear()%>
                 <% if (movie.getIsFavorite()) { %>
                 <a href="toggleFavorite.jsp?id=<%= id%>"><span class="glyphicon glyphicon-star-empty active"
                                                                aria-hidden="true"></span></a>
@@ -56,15 +58,14 @@
             </small>
         </h1>
 
-        <h2><%= movie.getGenre()%>, <%= movie.getReleaseYear()%></h2>
-        <h3 class="rating"></h3>
-        <p class="plot" style="font-size: larger">
+        <h3 class="border">,<%= movie.getGenre()%></h3>
+        <p class="plot" style="font-size: larger"></p>
+        <h4 class="awards"> </h4>
 
-        </p>
         <br>
-        <a href="showAllMovies.jsp" class="btn btn-default btn-lg" role="button">Back</a>
-        <a href="editMovie.jsp?id=<%= id %>" class="btn btn-primary btn-lg" role="button">Edit</a>
-        <button class="btn btn-danger btn-lg" data-href="delete.jsp?id=<%= id %>" data-toggle="modal"
+        <a href="showAllMovies.jsp" class="btn btn-default" role="button">Back</a>
+        <a href="editMovie.jsp?id=<%= id %>" class="btn btn-primary" role="button">Edit</a>
+        <button class="btn btn-danger " data-href="delete.jsp?id=<%= id %>" data-toggle="modal"
                 data-target="#confirm-delete">Delete
         </button>
 
@@ -83,8 +84,9 @@
                 })
                 .then(function (text) {
                     $('.plot').append(text.Plot);
+                    $('.awards').append(text.Awards + '  ');
                     $('.rating').append(text.imdbRating + '/10');
-
+                    $('.border').prepend(text.Runtime);
                     console.log('Request successful');
                 })
                 .catch(function (error) {
