@@ -10,8 +10,12 @@ public class Movie {
 	private String genre;
 	private String coverUrl;
 	private boolean isFavorite = false;
-	private List<Actor> actors;
+    private List<Actor> actors;
 
+
+    public void setActors(List<Actor> actors) {
+        this.actors = actors;
+    }
 
 	public List<Actor> getActors() {
 		return actors;
@@ -21,6 +25,8 @@ public class Movie {
 		Actor actor = new Actor(name, role);
 		actors.add(actor);
 	}
+
+
 	public Movie() {
 		super();
 	}

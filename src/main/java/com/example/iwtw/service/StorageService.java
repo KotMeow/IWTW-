@@ -27,8 +27,8 @@ public class StorageService {
 //    }
 
     public void update(int id, Movie movie) {
-
         Movie updatedMovie = fixedMovie(movie);
+        updatedMovie.setActors(db.get(id).getActors());
         db.set(id, updatedMovie);
     }
 
