@@ -1,6 +1,7 @@
 <%@page import="com.example.iwtw.domain.Movie" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <% int id = Integer.parseInt(request.getParameter("id"));
     Movie movie = storage.getAllMovies().get(id); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -40,6 +41,7 @@
 </div>
 
 <div class="container-fluid">
+    <div class="row">
     <div class="col-md-3">
         <img class="img-responsive" src="<%= movie.getCoverUrl()%>"/>
     </div>
@@ -57,19 +59,38 @@
                 <% } %>
             </small>
         </h1>
-
         <h3 class="border">,<%= movie.getGenre()%></h3>
+        <%--<h2 style="margin-top: 20px;">Plot:</h2>--%>
         <p class="plot" style="font-size: larger"></p>
-        <h4 class="awards"> </h4>
-
+        <table style="margin-top: 30px;" class="table table-hover">
+            <tr>
+                <th><h5 style="font-size: larger"><strong>Name</strong></h5></th>
+                <th><h5 style="font-size: larger"><strong>Role</strong></h5></th>
+            </tr>
+            <h2>Cast:</h2>
+            <c:forEach items="<%= movie.getActors()%>" var="actor">
+                <tr>
+                    <td><h5 style="font-size: larger">${actor.getName()} </h5></td>
+                    <td><h5 style="font-size: larger">${actor.getRole()}</h5> </td>
+                </tr>
+            </c:forEach>
+        </table>
+        <h4 class="awards"></h4>
         <br>
         <a href="showAllMovies.jsp" class="btn btn-default" role="button">Back</a>
         <a href="editMovie.jsp?id=<%= id %>" class="btn btn-primary" role="button">Edit</a>
         <button class="btn btn-danger " data-href="delete.jsp?id=<%= id %>" data-toggle="modal"
                 data-target="#confirm-delete">Delete
         </button>
-
     </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-1">
+
+        </div>
+    </div>
+
+
 
 </div>
 <script type="application/javascript">
@@ -84,7 +105,7 @@
                 })
                 .then(function (text) {
                     $('.plot').append(text.Plot);
-                    $('.awards').append(text.Awards + '  ');
+                    $('.awards').append("Awards: " + text.Awards + '  ');
                     $('.rating').append(text.imdbRating + '/10');
                     $('.border').prepend(text.Runtime);
                     console.log('Request successful');

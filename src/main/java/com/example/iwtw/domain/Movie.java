@@ -1,5 +1,8 @@
 package com.example.iwtw.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movie {
 	
 	private String title;
@@ -7,7 +10,17 @@ public class Movie {
 	private String genre;
 	private String coverUrl;
 	private boolean isFavorite = false;
+	private List<Actor> actors;
 
+
+	public List<Actor> getActors() {
+		return actors;
+	}
+
+	public void addActor (String name, String role) {
+		Actor actor = new Actor(name, role);
+		actors.add(actor);
+	}
 	public Movie() {
 		super();
 	}
@@ -19,6 +32,7 @@ public class Movie {
 		this.releaseYear = releaseYear;
 		this.genre = genre;
 		this.coverUrl = coverUrl;
+		actors =  new ArrayList<Actor>();
 	}
 
 	public Movie(String title, int releaseYear, String genre, String coverUrl, boolean isFavorite) {
