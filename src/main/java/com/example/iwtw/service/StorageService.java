@@ -35,6 +35,9 @@ public class StorageService {
     public void delete(int id) {
         db.remove(id);
     }
+    public void deleteActor(int idMovie, int idActor) {
+        db.get(idMovie).getActors().remove(idActor);
+    }
 
     public void toggleFavorite(int id) {
         Movie movie = db.get(id);

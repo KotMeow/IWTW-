@@ -1,9 +1,10 @@
 <%@page import="com.example.iwtw.domain.Movie" %>
+<%@page import="com.example.iwtw.domain.Actor" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <% int id = Integer.parseInt(request.getParameter("id"));
-    Movie movie = storage.getAllMovies().get(id); %>
+    Movie movie = storage.getAllMovies().get(id);%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,9 +15,7 @@
 </head>
 
 <body>
-
 <jsp:include page="navbar.jsp"/>
-
 <div class="modal fade" id="confirm-delete" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -68,10 +67,23 @@
                 <th><h5 style="font-size: larger"><strong>Role</strong></h5></th>
             </tr>
             <h2>Cast:</h2>
-            <c:forEach items="<%= movie.getActors()%>" var="actor">
+            <c:forEach items="<%= movie.getActors()%>" var="actor" varStatus="loop">
                 <tr>
                     <td><h5 style="font-size: larger">${actor.getName()} </h5></td>
                     <td><h5 style="font-size: larger">${actor.getRole()}</h5> </td>
+                    <%--<c:set var="actorr" value="actor"/>--%>
+                    <td><h5><% out.println(movie.getActors().indexOf(pageContext.getAttribute("actor")));%></h5></td>
+
+                    <td>
+                        <button type="button" class="btn btn-default btn-sm" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm" data-href="deleteActor.jsp?idActor=<%=movie.getActors().indexOf(pageContext.getAttribute("actor"))%>&idMovie=<%=id%>" data-toggle="modal"
+                                data-target="#confirm-delete">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </button>
+                    </td>
+
                 </tr>
             </c:forEach>
         </table>
