@@ -32,6 +32,13 @@ public class StorageService {
         db.set(id, updatedMovie);
     }
 
+    public void updateActor(int idMovie, int idActor, Actor actor){
+        Actor updatedActor = new Actor(actor.getName(),actor.getRole());
+        db.get(idMovie).getActors().set(idActor,updatedActor);
+    }
+    public void addActor(int id, Actor actor) {
+        db.get(id).getActors().add(actor);
+    }
     public void delete(int id) {
         db.remove(id);
     }
