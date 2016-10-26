@@ -28,17 +28,17 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="releaseYear">Release Year</label>
-                <input class="form-control" type="number" name="releaseYear" value="<%= movie.getReleaseYear()%>"
+                <input class="form-control" id="releaseYear" type="number" name="releaseYear" value="<%= movie.getReleaseYear()%>"
                        min="1920" max="3000" required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
-                <input class="form-control" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50"
+                <input class="form-control" id="genre" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50"
                        required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>
-                <input class="form-control" type="url" name="coverUrl" value="<%= movie.getCoverUrl()%>"/>
+                <input class="form-control" id="coverUrl" type="url" name="coverUrl" value="<%= movie.getCoverUrl()%>"/>
             </div>
             <div class="form-group">
                 <a class="btn btn-default" href="movieDetails.jsp?id=<%=id%>">Back</a>

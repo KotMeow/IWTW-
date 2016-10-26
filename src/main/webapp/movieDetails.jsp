@@ -12,7 +12,6 @@
     <title>IWTW | <%=movie.getTitle()%>
     </title>
 </head>
-
 <body>
 <jsp:include page="navbar.jsp"/>
 <div class="modal fade" id="confirm-delete" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -39,11 +38,14 @@
 </div>
 
 <div class="container-fluid">
+    <div>
     <div class="row">
         <div class="col-md-3">
-            <img alt="<%= movie.getTitle() %>" class="img-responsive" src="<%= movie.getCoverUrl()%>"/>
+
+            <img class="img-responsive" src="<%= movie.getCoverUrl() %>" cross-origin="anonymous"/>
+
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" >
             <h1 class="movieTitle"><%= movie.getTitle() %>
                 <div class="rating" style="float: right"></div>
                 <small>
@@ -102,18 +104,18 @@
                     data-target="#confirm-delete">Delete
             </button>
         </div>
+        </div>
     </div>
-
-
 </div>
 <script type="application/javascript">
     $(function () {
+
 //        Potwierdzenie usuwania
         $("#confirm-delete").on('show.bs.modal', function (e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
         });
 //          Pobieranie danych o filmie
-        fetch('http://www.omdbapi.com/?t=<%= movie.getTitle()%>&y=<%= movie.getReleaseYear()%>&plot=full&r=json', {mode: 'cors'})
+        fetch('http://www.omdbapi.com/?t=<%= movie.getTitle()%>&y=&plot=full&r=json', {mode: 'cors'})
                 .then(function (response) {
                     return response.json();
                 })
@@ -127,7 +129,7 @@
                 .catch(function (error) {
                     log('Request failed', error)
                 });
-
+//        $('body').addClass("background-batman");
     });
 
 </script>

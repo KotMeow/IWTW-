@@ -26,6 +26,7 @@ public class StorageService {
 //        addtoMovie.addActor(name, role);
 //    }
 
+
     public void update(int id, Movie movie) {
         Movie updatedMovie = fixedMovie(movie);
         updatedMovie.setActors(db.get(id).getActors());
@@ -39,6 +40,7 @@ public class StorageService {
     public void addActor(int id, Actor actor) {
         db.get(id).getActors().add(actor);
     }
+
     public void delete(int id) {
         db.remove(id);
     }

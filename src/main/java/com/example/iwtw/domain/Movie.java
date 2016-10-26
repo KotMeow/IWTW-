@@ -9,8 +9,10 @@ public class Movie {
     private int releaseYear;
     private String genre;
     private String coverUrl;
+
     private boolean isFavorite = false;
     private List<Actor> actors;
+
 
     public Movie() {
         super();
@@ -34,7 +36,9 @@ public class Movie {
         this.genre = genre;
         this.coverUrl = coverUrl;
         this.isFavorite = isFavorite;
+        actors = new ArrayList<Actor>();
     }
+
 
     public void setActors(List<Actor> actors) {
         this.actors = actors;

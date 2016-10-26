@@ -3,12 +3,15 @@ body {
 	background-color: #F8F9F9;
 }
 
+
 .navbar-brand {
 	font-family: 'Yellowtail', cursive;
-	font-size: 25px;
+	font-size: 30px;
 }
 
 .navbar-primary {
+    font-size: larger;
+    letter-spacing: 1px;
 	border-radius: 0;
 	border-bottom: solid #50A8E1 1px;
 }
@@ -34,7 +37,7 @@ body {
   height: 340px;
   background-size: cover;
   margin: 5px;
-  box-shadow: 2px 2px 5px #AFB1B9;
+  box-shadow: 3px 3px 6px #AFB1B9;
   
 }
 
@@ -50,6 +53,7 @@ body {
 	font-size: larger;
   color: #F8F9F9;
   position: absolute;
+  bottom: 0px;
   font-weight: 700;
   padding: 10px;
 }
@@ -59,9 +63,10 @@ a:hover {
 }
 
 img {
+    margin-top: 20px;
   width: 400px;
   height: 550px;
-    box-shadow: 2px 2px 5px #AFB1B9;
+    /*box-shadow: 3px 3px 6px #AFB1B9;*/
 }
 
 h1.movieTitle {
