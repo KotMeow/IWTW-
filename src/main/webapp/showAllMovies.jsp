@@ -22,7 +22,7 @@
         </ul>
 
     </div>
-    <div class="col-md-8">
+    <div class="col-md-10">
         <c:if test="${storage.getAllMovies().size() == 0}">
             <div class="container-fluid">
                 <h1>Library seems to be empty</h1>
@@ -58,29 +58,6 @@
         </c:forEach>
     </div>
 </div>
-<script type="application/javascript">
-    $(".showFavorite").on('click', function () {
-        $(".isFavorite").addClass('hidden');
-        $(".isWatched").removeClass('hidden');
-        $(".showWatched").removeClass('active')
-        $(".showAll").removeClass('active')
-        $(this).addClass("active");
-    });
-    $(".showWatched").on('click', function () {
-        $(".isWatched").addClass('hidden');
-        $(".isFavorite").removeClass('hidden');
-        $(".showFavorite").removeClass('active')
-        $(".showAll").removeClass('active')
-        $(this).addClass("active");
-    });
-    $(".showAll").on('click', function () {
-        $(".isWatched").removeClass('hidden');
-        $(".isFavorite").removeClass('hidden');
-        $(".showFavorite").removeClass('active')
-        $(".showWatched").removeClass('active')
-        $(this).addClass("active");
-    });
-
-</script>
+<script src="static/showMoviesScript.js"></script>
 </body>
 </html>

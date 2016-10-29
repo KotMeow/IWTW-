@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<% %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,15 +11,42 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
-
-<div class="container-fluid">
-    <div class="col-md-6 details">
-        <h1 style="text-align: center">Your favorites movies</h1>
-        <canvas id="myChart" width="500" height="500"></canvas>
+<h1 id="detailsTitle">Details about your library:</h1>
+<div class="container">
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="col-md-6 details">
+            <p class="detailsInfo">You have <strong>${all}
+            </strong>movies in your library.</p>
+            <p class="detailsInfo">And <strong>${favorite}
+            </strong> of them are your favorites.</p>
+            <p class="detailsInfo">It's like <strong>${favoritePercent}%
+            </strong></p>
+            <p class="detailsInfo">${favoriteRate}</p>
+        </div>
+        <div class="col-md-6">
+            <canvas id="myChart" width="300" height="300"></canvas>
+        </div>
     </div>
-    <div class="col-md-6 details">
-        <h1 style="text-align: center">Your movies by genre</h1>
-        <canvas id="myChart2" width="500" height="500"></canvas>
+    <div class="row">
+        <div class="col-md-6 details">
+            <p class="detailsInfo">Your favorite genre is: <strong>
+                ${favoriteGenre.key}
+            </strong></p>
+            <p class="detailsInfo">You have <strong>${favoriteGenre.value}
+            </strong> movies of that genre</p>
+        </div>
+        <div class="col-md-6">
+            <canvas id="myChart2" width="300" height="300"></canvas>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 details">
+            <p class="detailsInfo">You have watched <strong>
+                ${watched}
+            </strong> movies</p>
+            <p class="detailsInfo">You have <strong>${favoriteGenre.value}
+            </strong> movies of that genre</p>
+        </div>
     </div>
 </div>
 
