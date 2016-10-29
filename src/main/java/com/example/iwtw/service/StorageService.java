@@ -12,7 +12,7 @@ public class StorageService {
     private Movie fixedMovie(Movie movie) {
         String title = movie.getTitle().substring(0, 1).toUpperCase() + movie.getTitle().substring(1);
         String genre = movie.getGenre().substring(0, 1).toUpperCase() + movie.getGenre().substring(1);
-        return new Movie(title, movie.getReleaseYear(), genre, movie.getCoverUrl(), movie.getIsFavorite());
+        return new Movie(title, movie.getReleaseYear(), genre, movie.getCoverUrl(), movie.getIsFavorite(), movie.getIsWatched());
     }
 
     public void add(Movie movie) {
@@ -52,7 +52,18 @@ public class StorageService {
         Movie movie = db.get(id);
         if (!movie.getIsFavorite()) {
             movie.setIsFavorite(true);
+            movie.setIsWatched(true);
         } else {
+            movie.setIsFavorite(false);
+        }
+    }
+
+    public void toggleWatched(int id) {
+        Movie movie = db.get(id);
+        if (!movie.getIsWatched()) {
+            movie.setIsWatched(true);
+        } else {
+            movie.setIsWatched(false);
             movie.setIsFavorite(false);
         }
     }

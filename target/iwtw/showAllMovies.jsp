@@ -12,23 +12,31 @@
 </head>
 <body>
 
-<c:if test="${storage.getAllMovies().size() == 0}">
-    <div class="container-fluid">
-        <h1>Library seems to be empty</h1>
-        <p><a class="btn btn-default btn-lg" href="populate.jsp">Change This!</a></p>
-    </div>
-</c:if>
 
 <div class="container-fluid">
     <div class="col-md-2">
-        <button class="btn btn-default hidethis">Show only favorite!</button>
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" class="showAll active"><a>Show all movies!</a></li>
+            <li class="showFavorite"><a>Show only favorite!</a></li>
+            <li class="showWatched"><a>Show movies you watched!</a></li>
+        </ul>
+
     </div>
     <div class="col-md-8">
-    <c:forEach items="${storage.getAllMovies()}" var="movie">
-        <c:if test="${!movie.getIsFavorite()}">
-            <span class="isFavorite">
+        <c:if test="${storage.getAllMovies().size() == 0}">
+            <div class="container-fluid">
+                <h1>Library seems to be empty</h1>
+                <p><a class="btn btn-default btn-lg" href="populate.jsp">Change This!</a></p>
+            </div>
         </c:if>
-        <a href="movieDetails.jsp?id=${storage.getAllMovies().indexOf(movie)}">
+        <c:forEach items="${storage.getAllMovies()}" var="movie">
+            <c:if test="${!movie.getIsFavorite()}">
+                <span class="isFavorite">
+            </c:if>
+            <c:if test="${!movie.getIsWatched()}">
+                <span class="isWatched">
+            </c:if>
+            <a href="movieDetails.jsp?id=${storage.getAllMovies().indexOf(movie)}">
                 <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
                     <div class="overlay">
                         <span class="item-header">${movie.getTitle()}</span>
@@ -39,20 +47,39 @@
                 </div>
 
             </a>
-        <c:if test="${!movie.getIsFavorite()}">
-            </span>
-        </c:if>
+            <c:if test="${!movie.getIsFavorite()}">
+                </span>
+            </c:if>
+            <c:if test="${!movie.getIsWatched()}">
+                </span>
+            </c:if>
 
-    </c:forEach>
+
+        </c:forEach>
     </div>
 </div>
 <script type="application/javascript">
-    $(".hidethis").on('click', function () {
-        $(".isFavorite").toggleClass('hidden');
-        var text = $(this).text();
-        $(this).text(
-                text == "Show only favorite!" ? "Show all" : "Show only favorite!");
-    })
+    $(".showFavorite").on('click', function () {
+        $(".isFavorite").addClass('hidden');
+        $(".isWatched").removeClass('hidden');
+        $(".showWatched").removeClass('active')
+        $(".showAll").removeClass('active')
+        $(this).addClass("active");
+    });
+    $(".showWatched").on('click', function () {
+        $(".isWatched").addClass('hidden');
+        $(".isFavorite").removeClass('hidden');
+        $(".showFavorite").removeClass('active')
+        $(".showAll").removeClass('active')
+        $(this).addClass("active");
+    });
+    $(".showAll").on('click', function () {
+        $(".isWatched").removeClass('hidden');
+        $(".isFavorite").removeClass('hidden');
+        $(".showFavorite").removeClass('active')
+        $(".showWatched").removeClass('active')
+        $(this).addClass("active");
+    });
 
 </script>
 </body>

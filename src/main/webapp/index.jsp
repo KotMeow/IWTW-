@@ -12,8 +12,9 @@
 <jsp:include page="navbar.jsp"/>
 <div class="container">
     <div class="jumbotron">
-        <h1>Welcome to IWTW</h1>
+        <h1>Welcome to <span class="brand">IWTW</span></h1>
         <p>Site where you can manage movies YOU Want To Watch</p>
+        <p>You can start here:</p>
         <p><a class="btn btn-default btn-lg" href="showAllMovies.jsp">Show library</a></p>
     </div>
 </div>

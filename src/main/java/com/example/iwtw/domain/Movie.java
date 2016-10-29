@@ -9,10 +9,17 @@ public class Movie {
     private int releaseYear;
     private String genre;
     private String coverUrl;
-
+    private boolean isWatched = false;
     private boolean isFavorite = false;
     private List<Actor> actors;
 
+    public boolean getIsWatched() {
+        return isWatched;
+    }
+
+    public void setIsWatched(boolean watched) {
+        isWatched = watched;
+    }
 
     public Movie() {
         super();
@@ -28,7 +35,7 @@ public class Movie {
         actors = new ArrayList<Actor>();
     }
 
-    public Movie(String title, int releaseYear, String genre, String coverUrl, boolean isFavorite) {
+    public Movie(String title, int releaseYear, String genre, String coverUrl, boolean isFavorite, boolean isWatched) {
         super();
 
         this.title = title;
@@ -36,6 +43,7 @@ public class Movie {
         this.genre = genre;
         this.coverUrl = coverUrl;
         this.isFavorite = isFavorite;
+        this.isWatched = isWatched;
         actors = new ArrayList<Actor>();
     }
 
