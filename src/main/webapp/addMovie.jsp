@@ -13,7 +13,8 @@
 <jsp:include page="navbar.jsp"/>
 
 <div class="container">
-    <div class="col-md-8">
+    <h1>Add new movie:</h1>
+    <div class="col-md-8 formwrap">
         <form class="form-horizontal" action="add.jsp">
             <div class="form-group">
                 <label class="control-label" for="title">Title</label>
@@ -21,15 +22,15 @@
             </div>
             <div class="form-group">
                 <label class="control-label" for="releaseYear">Release Year</label>
-                <input class="form-control" type="number" name="releaseYear" value="" min="1920" max="3000" required/>
+                <input class="form-control" id="releaseYear" type="number" name="releaseYear" value="" min="1920" max="3000" required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
-                <input class="form-control" type="text" name="genre" value="" maxlength="50" required/>
+                <input class="form-control" id="genre" type="text" name="genre" value="" maxlength="50" required/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>
-                <input class="form-control" type="url" name="coverUrl" value="" required/>
+                <input class="form-control" id="coverUrl" type="url" name="coverUrl" value="" required/>
             </div>
             <div class="form-group">
                 <a class="btn btn-default" href="showAllMovies.jsp">Back</a>

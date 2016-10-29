@@ -19,17 +19,41 @@
     </div>
 </c:if>
 
-<div class="container">
+<div class="container-fluid">
+    <div class="col-md-2">
+        <button class="btn btn-default hidethis">Show only favorite!</button>
+    </div>
+    <div class="col-md-8">
     <c:forEach items="${storage.getAllMovies()}" var="movie">
+        <c:if test="${!movie.getIsFavorite()}">
+            <span class="isFavorite">
+        </c:if>
         <a href="movieDetails.jsp?id=${storage.getAllMovies().indexOf(movie)}">
-            <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
-                <div class="overlay">
-                    <span class="item-header">${movie.getTitle()}</span>
+                <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
+                    <div class="overlay">
+                        <span class="item-header">${movie.getTitle()}</span>
+                        <c:if test="${movie.getIsFavorite()}">
+                            <span class="showallstar glyphicon glyphicon-star-empty active" aria-hidden="true"></span>
+                        </c:if>
+                    </div>
                 </div>
-            </div>
-        </a>
-    </c:forEach>
-</div>
 
+            </a>
+        <c:if test="${!movie.getIsFavorite()}">
+            </span>
+        </c:if>
+
+    </c:forEach>
+    </div>
+</div>
+<script type="application/javascript">
+    $(".hidethis").on('click', function () {
+        $(".isFavorite").toggleClass('hidden');
+        var text = $(this).text();
+        $(this).text(
+                text == "Show only favorite!" ? "Show all" : "Show only favorite!");
+    })
+
+</script>
 </body>
 </html>

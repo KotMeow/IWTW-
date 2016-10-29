@@ -3,7 +3,8 @@
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <% int id = Integer.parseInt(request.getParameter("id"));
-    Movie movie = storage.getAllMovies().get(id);%>
+    Movie movie = storage.getAllMovies().get(id);
+    pageContext.setAttribute("movie", movie);%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,21 +43,33 @@
     <div class="row">
         <div class="col-md-3">
 
-            <img class="img-responsive" src="<%= movie.getCoverUrl() %>" cross-origin="anonymous"/>
+            <img class="img-responsive poster" src="<%= movie.getCoverUrl() %>" cross-origin="anonymous"/>
 
         </div>
         <div class="col-md-8" >
             <h1 class="movieTitle"><%= movie.getTitle() %>
                 <div class="rating" style="float: right"></div>
                 <small>
-                    <%= movie.getReleaseYear()%>
-                    <% if (movie.getIsFavorite()) { %>
-                    <a href="toggleFavorite.jsp?id=<%= id%>"><span class="glyphicon glyphicon-star-empty active"
-                                                                   aria-hidden="true"></span></a>
-                    <% } else { %>
-                    <a href="toggleFavorite.jsp?id=<%= id %>"><span class="glyphicon glyphicon-star-empty"
-                                                                    aria-hidden="true"></span></a>
-                    <% } %>
+                    ${movie.getReleaseYear()}
+                    <%--<% if (movie.getIsFavorite()) { %>--%>
+                    <%--<a href="toggleFavorite.jsp?id=<%= id%>"><span class="glyphicon glyphicon-star-empty active"--%>
+                                                                   <%--aria-hidden="true"></span></a>--%>
+                    <%--<% } else { %>--%>
+                    <%--<a href="toggleFavorite.jsp?id=<%= id %>"><span class="glyphicon glyphicon-star-empty"--%>
+                                                                    <%--aria-hidden="true"></span></a>--%>
+                    <%--<% } %>--%>
+                        <c:choose>
+                            <c:when test="${movie.getIsFavorite() == true}">
+                                <a href="toggleFavorite.jsp?id=<%= id%>"><span class="glyphicon glyphicon-star-empty active"
+                                                                               aria-hidden="true"></span></a>
+                                <br />
+                            </c:when>
+                            <c:otherwise>
+                                <a href="toggleFavorite.jsp?id=<%= id %>"><span class="glyphicon glyphicon-star-empty"
+                                                                                aria-hidden="true"></span></a>
+                                <br />
+                            </c:otherwise>
+                        </c:choose>
                 </small>
             </h1>
             <h3 class="border">,<%= movie.getGenre()%>
@@ -68,10 +81,12 @@
                 <tr>
                     <th><h5 style="font-size: larger"><strong>Name</strong></h5></th>
                     <th><h5 style="font-size: larger"><strong>Role</strong></h5></th>
+                    <th></th>
                 </tr>
                 <h2 style="margin-top: 50px;">Cast:</h2>
-                <c:forEach items="<%= movie.getActors()%>" var="actor" varStatus="loop">
+                <c:forEach items="${ movie.getActors()}" var="actor" varStatus="loop">
                     <tr>
+
                         <td><h5 style="font-size: larger">${actor.getName()} </h5></td>
                         <td><h5 style="font-size: larger">${actor.getRole()}</h5></td>
                         <td>

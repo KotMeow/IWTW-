@@ -17,7 +17,8 @@
 
 <jsp:include page="navbar.jsp"/>
 <div class="container">
-    <div class="col-md-8">
+    <h1>Edit information about "<strong><%= movie.getTitle() %></strong>"</h1>
+    <div class="col-md-8 formwrap">
         <form class="form-horizontal" action="edit.jsp">
             <input type="hidden" name="id" value="<%=id %>"/>
             <input type="hidden" name="isFavorite" value="<%=movie.getIsFavorite()%>"/>

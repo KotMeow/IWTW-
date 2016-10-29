@@ -7,13 +7,18 @@ body {
 .navbar-brand {
 	font-family: 'Yellowtail', cursive;
 	font-size: 30px;
+    color: #F8F9F9;
+}
+.navbar-brand:hover {
+    color: #F8F9F9;
 }
 
 .navbar-primary {
     font-size: larger;
     letter-spacing: 1px;
 	border-radius: 0;
-	border-bottom: solid #50A8E1 1px;
+    background-color: #50A8E1;
+	/*border-bottom: solid #2D6998 2px;*/
 }
 .glyphicon-star-empty {
 	color: #AFB1B9;
@@ -21,10 +26,28 @@ body {
 	margin-left: 5px;
 }
 
+.nav.navbar-nav li a {
+    color: #F8F9F9;
+}
+.col-md-8.formwrap {
+    padding-left: 40px;
+    border-left: solid #50A8E1 1px;
+}
+.nav.navbar-nav li a:hover {
+    background-color: #2D6998;
+}
 .glyphicon-star-empty.active {
 	color: gold;
 }
 
+.showallstar {
+    margin-left: 0;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    padding: 10px;
+}
 .jumbotron {
 	background-color: #50A8E1;
 }
@@ -53,7 +76,7 @@ body {
 	font-size: larger;
   color: #F8F9F9;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   font-weight: 700;
   padding: 10px;
 }
@@ -62,10 +85,17 @@ a:hover {
 	text-decoration: none;
 }
 
-img {
+img.poster {
     margin-top: 20px;
+    margin-left: 20px;
   width: 400px;
   height: 550px;
+    box-shadow: 3px 3px 6px #AFB1B9;
+}
+
+img.actor {
+    width: 32px;
+    height: 44px;
     /*box-shadow: 3px 3px 6px #AFB1B9;*/
 }
 
@@ -81,7 +111,7 @@ h3 {
 }
 
 .icon-bar {
-  background-color: #50A8E1;
+  background-color: #F8F9F9;
 }
 
 #myChart, #myChart2 {
@@ -102,6 +132,7 @@ h3 {
 table {
     margin-top: 50px;
 }
+
 
 /*h2 {*/
     /*border-bottom: solid #50A8E1 1px;*/

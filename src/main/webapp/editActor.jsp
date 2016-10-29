@@ -20,7 +20,8 @@
 
 <jsp:include page="navbar.jsp"/>
 <div class="container">
-    <div class="col-md-8">
+    <h1>Edit actor <strong><%=actor.getName()%> </strong> who play in "<strong><%= movie.getTitle()%></strong>"</h1>
+    <div class="col-md-8 formwrap">
         <form class="form-horizontal" method="post" action="editActor">
             <input type="hidden" name="idActor" value="<%=idActor %>"/>
             <input type="hidden" name="idMovie" value="<%=idMovie %>"/>
