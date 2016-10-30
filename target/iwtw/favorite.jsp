@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
+<% %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,25 +11,47 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
-
+<div class="container">
+    <h1 id="detailsTitle">Details about your library:</h1>
+</div>
 <div class="container-fluid">
-    <div class="col-md-6 details">
-        <h1 style="text-align: center">Your favorites movies</h1>
-        <canvas id="myChart" width="500" height="500"></canvas>
+    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+        <div class="detailsWrapper">
+            <p class="detailsInfo">You have <strong>${all}
+            </strong>movies in your library.</p>
+            <p class="detailsInfo">And <strong>${favorite}
+            </strong> of them are your favorites.</p>
+        </div>
+        <canvas id="myChart" width="400" height="400"></canvas>
     </div>
-    <div class="col-md-6 details">
-        <h1 style="text-align: center">Your movies by genre</h1>
-        <canvas id="myChart2" width="500" height="500"></canvas>
+    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+        <div class="detailsWrapper">
+            <p class="detailsInfo">Your favorite genre is: <strong>
+                ${favoriteGenre.key}
+            </strong></p>
+            <p class="detailsInfo">You have <strong>${favoriteGenre.value}
+            </strong> movies of that genre</p>
+        </div>
+        <canvas id="myChart1" width="400" height="400"></canvas>
+    </div>
+    <div class="col-md-4 details">
+        <div class="detailsWrapper">
+            <p class="detailsInfo">You have watched <strong>
+                ${watched}
+            </strong> movies</p>
+            <p class="detailsInfo">It's <strong>${watchedPercent}%
+            </strong> of your library</p>
+        </div>
+        <canvas id="myChart2" width="400" height="400"></canvas>
     </div>
 </div>
-
 
 <script type="text/javascript">
     var config = {
         type: 'pie',
         data: {
             labels: [
-                "Favorite",
+                "Watched",
                 "Others"
             ],
             datasets: [
@@ -59,7 +81,7 @@
         }
     };
     var config1 = {
-        type: 'pie',
+        type: 'horizontalBar',
         data: {
             labels: [
                 <c:forEach items="${genre}" var="genre">
@@ -68,6 +90,7 @@
             ],
             datasets: [
                 {
+                    label: "Amount: ",
                     data: [
                         <c:forEach items="${genre}" var="genre">
                         ${genre.value},
@@ -98,12 +121,52 @@
             responsive: false,
             legend: {
                 position: 'bottom'
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
             }
+
+        }
+    };
+    var config2 = {
+        type: 'pie',
+        data: {
+            labels: [
+                "Favorite",
+                "Others"
+            ],
+            datasets: [
+                {
+                    data: [
+                        ${watched},
+                        ${others}
+                    ],
+                    backgroundColor: [
+                        "#248232",
+                        "#50A8E1"
+
+                    ],
+                    hoverBackgroundColor: [
+                        "#248232",
+                        "#50A8E1"
+
+                    ]
+                }]
+        },
+        options: {
+            maintainAspectRatio: true,
+            responsive: false
         }
     };
     $(function () {
         new Chart(document.getElementById("myChart"), config);
-        new Chart(document.getElementById("myChart2"), config1);
+        new Chart(document.getElementById("myChart1"), config1);
+        new Chart(document.getElementById("myChart2"), config2);
     });
 
 

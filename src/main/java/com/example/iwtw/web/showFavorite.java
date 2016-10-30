@@ -27,7 +27,7 @@ public class showFavorite extends HttpServlet {
         int favorite = 0;
         int watched = 0;
         int others;
-        float favoritePercent = 0;
+        float watchedPercent = 0;
         String favoriteRate = "";
         Map.Entry<String, Integer> maxEntry = null;
 
@@ -48,20 +48,17 @@ public class showFavorite extends HttpServlet {
                 }
             }
             request.setAttribute("favoriteGenre", maxEntry);
-            favoritePercent = ((float) favorite / (float) storage.getAllMovies().size()) * 100.0f;
+            watchedPercent = ((float) watched / (float) storage.getAllMovies().size()) * 100.0f;
         }
 
         others = storage.getAllMovies().size() - favorite;
 
-        if (favoritePercent < 20 ) favoriteRate = "You don't like your movies :(";
-        else if (favoritePercent < 50) favoriteRate = "You like your movies! ;)";
-        else if (favoritePercent <= 100) favoriteRate = "You love your movies! <3";
 
 
         response.setContentType("text/html");
         request.setAttribute("genre", genre);
         request.setAttribute("watched", watched);
-        request.setAttribute("favoritePercent", Math.ceil(favoritePercent));
+        request.setAttribute("watchedPercent", Math.ceil(watchedPercent));
         request.setAttribute("all", storage.getAllMovies().size());
         request.setAttribute("favorite", favorite);
         request.setAttribute("others", others);

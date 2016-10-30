@@ -55,11 +55,11 @@ body {
 }
 
 .glyphicon-ok.active {
-    color: #73AB84;
+    color: #248232;
 }
 
 .glyphicon-star-empty.active {
-    color: #E3B23C;
+    color: #FFD150;
 }
 
 .nav.navbar-nav li a {
@@ -89,6 +89,7 @@ body {
 }
 
 .overlay {
+    display: block;
     position: relative;
     width: 100%;
     height: 100%;
@@ -108,11 +109,10 @@ body {
 
 .showallstar {
     margin-left: 0;
-    float: right;
     position: absolute;
-    bottom: 0;
     font-weight: 700;
     padding: 10px;
+    font-size: 1.2em;
 }
 
 a:hover {
@@ -163,17 +163,21 @@ table {
 }
 
 .details {
-    border-left: solid #50A8E1 1px;
     margin-top: 20px;
     padding: 30px;
+    text-align: center;
 }
 
 #detailsTitle {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     border-bottom: solid #50A8E1 2px;
     text-align: center;
 }
 
 p.detailsInfo {
     font-size: x-large;
+}
+
+.detailsWrapper {
+    height: 150px;
 }

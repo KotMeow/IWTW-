@@ -11,52 +11,47 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
-<h1 id="detailsTitle">Details about your library:</h1>
 <div class="container">
-    <div class="row" style="margin-bottom: 50px;">
-        <div class="col-md-6 details">
+    <h1 id="detailsTitle">Details about your library:</h1>
+</div>
+<div class="container-fluid">
+    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+        <div class="detailsWrapper">
             <p class="detailsInfo">You have <strong>${all}
             </strong>movies in your library.</p>
             <p class="detailsInfo">And <strong>${favorite}
             </strong> of them are your favorites.</p>
-            <p class="detailsInfo">It's like <strong>${favoritePercent}%
-            </strong></p>
-            <p class="detailsInfo">${favoriteRate}</p>
         </div>
-        <div class="col-md-6">
-            <canvas id="myChart" width="300" height="300"></canvas>
-        </div>
+        <canvas id="myChart" width="400" height="400"></canvas>
     </div>
-    <div class="row">
-        <div class="col-md-6 details">
+    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+        <div class="detailsWrapper">
             <p class="detailsInfo">Your favorite genre is: <strong>
                 ${favoriteGenre.key}
             </strong></p>
             <p class="detailsInfo">You have <strong>${favoriteGenre.value}
             </strong> movies of that genre</p>
         </div>
-        <div class="col-md-6">
-            <canvas id="myChart2" width="300" height="300"></canvas>
-        </div>
+        <canvas id="myChart1" width="400" height="400"></canvas>
     </div>
-    <div class="row">
-        <div class="col-md-6 details">
+    <div class="col-md-4 details">
+        <div class="detailsWrapper">
             <p class="detailsInfo">You have watched <strong>
                 ${watched}
             </strong> movies</p>
-            <p class="detailsInfo">You have <strong>${favoriteGenre.value}
-            </strong> movies of that genre</p>
+            <p class="detailsInfo">It's <strong>${watchedPercent}%
+            </strong> of your library</p>
         </div>
+        <canvas id="myChart2" width="400" height="400"></canvas>
     </div>
 </div>
-
 
 <script type="text/javascript">
     var config = {
         type: 'pie',
         data: {
             labels: [
-                "Favorite",
+                "Watched",
                 "Others"
             ],
             datasets: [
@@ -86,7 +81,7 @@
         }
     };
     var config1 = {
-        type: 'pie',
+        type: 'horizontalBar',
         data: {
             labels: [
                 <c:forEach items="${genre}" var="genre">
@@ -95,6 +90,7 @@
             ],
             datasets: [
                 {
+                    label: "Amount: ",
                     data: [
                         <c:forEach items="${genre}" var="genre">
                         ${genre.value},
@@ -125,12 +121,52 @@
             responsive: false,
             legend: {
                 position: 'bottom'
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
             }
+
+        }
+    };
+    var config2 = {
+        type: 'pie',
+        data: {
+            labels: [
+                "Favorite",
+                "Others"
+            ],
+            datasets: [
+                {
+                    data: [
+                        ${watched},
+                        ${others}
+                    ],
+                    backgroundColor: [
+                        "#248232",
+                        "#50A8E1"
+
+                    ],
+                    hoverBackgroundColor: [
+                        "#248232",
+                        "#50A8E1"
+
+                    ]
+                }]
+        },
+        options: {
+            maintainAspectRatio: true,
+            responsive: false
         }
     };
     $(function () {
         new Chart(document.getElementById("myChart"), config);
-        new Chart(document.getElementById("myChart2"), config1);
+        new Chart(document.getElementById("myChart1"), config1);
+        new Chart(document.getElementById("myChart2"), config2);
     });
 
 

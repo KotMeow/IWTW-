@@ -83,7 +83,7 @@
                         </c:choose>
                     </small>
                 </h1>
-                <h3 class="border"><%= movie.getGenre()%>
+                <h3 class="movieDetails border"><%= movie.getGenre()%>
                 </h3>
                 <%--<h2 style="margin-top: 20px;">Plot:</h2>--%>
                 <p class="plot" style="font-size: large"></p>

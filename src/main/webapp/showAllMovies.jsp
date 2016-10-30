@@ -40,9 +40,15 @@
                 <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
                     <div class="overlay">
                         <span class="item-header">${movie.getTitle()}</span>
-                        <c:if test="${movie.getIsFavorite()}">
-                            <span class="showallstar glyphicon glyphicon-star-empty active" aria-hidden="true"></span>
-                        </c:if>
+                        <c:choose>
+                            <c:when test="${movie.getIsFavorite()}">
+                                <span class="showallstar glyphicon glyphicon-star-empty active"></span>
+                            </c:when>
+                            <c:when test="${movie.getIsWatched()}">
+                                <span class="showallstar glyphicon glyphicon-ok active"></span>
+                            </c:when>
+                        </c:choose>
+
                     </div>
                 </div>
 
