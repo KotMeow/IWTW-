@@ -13,8 +13,8 @@ import com.example.iwtw.domain.Actor;
 import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
-@WebServlet(name = "toggleIsWatched", urlPatterns = "/toggleIsWatched")
-public class toggleIsWatched extends HttpServlet {
+@WebServlet(name = "toggleIsFavorite", urlPatterns = "/toggleIsFavorite")
+public class toggleIsFavorite extends HttpServlet {
 
     StorageService storage = new StorageService();
     @Override
@@ -22,8 +22,8 @@ public class toggleIsWatched extends HttpServlet {
             throws ServletException, IOException {
 
         int idMovie = Integer.parseInt(request.getParameter("idMovie"));
-        storage.toggleWatched(idMovie);
-        response.getWriter().write(String.valueOf(storage.getAllMovies().get(idMovie).getIsWatched()));
+        storage.toggleFavorite(idMovie);
+        response.getWriter().write(String.valueOf(storage.getAllMovies().get(idMovie).getIsFavorite()));
         //request.getRequestDispatcher("movieDetails.jsp?id="+idMovie).forward(request, response);
     }
 }

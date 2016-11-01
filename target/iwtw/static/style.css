@@ -121,12 +121,16 @@ a:hover {
 
 /*Movie details css*/
 img.poster {
+    margin: 0 auto;
     margin-top: 20px;
-    margin-left: 20px;
-    width: 400px;
-    height: 550px;
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+    /*width: 400px;*/
+    /*height: 550px;*/
     box-shadow: 3px 3px 6px #AFB1B9;
 }
+
+img.poster
 
 img.actor {
     width: 32px;
@@ -155,6 +159,10 @@ h3.movieDetails {
 
 table {
     margin-top: 50px;
+}
+
+a {
+    cursor: pointer;
 }
 
 /*Library details css*/

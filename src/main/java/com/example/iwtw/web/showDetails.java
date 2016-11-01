@@ -14,7 +14,7 @@ import com.example.iwtw.domain.Movie;
 import com.example.iwtw.service.StorageService;
 
 @WebServlet(name = "showDetails", urlPatterns = "/showDetails")
-public class showFavorite extends HttpServlet {
+public class showDetails extends HttpServlet {
 
     StorageService storage = new StorageService();
 
@@ -64,7 +64,7 @@ public class showFavorite extends HttpServlet {
         request.setAttribute("others", others);
         request.setAttribute("favoriteRate", favoriteRate);
 
-        request.getRequestDispatcher("/favorite.jsp").forward(request, response);
+        request.getRequestDispatcher("/details.jsp").forward(request, response);
 
     }
 }

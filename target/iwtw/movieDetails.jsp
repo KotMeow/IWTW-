@@ -15,72 +15,21 @@
 </head>
 <body>
 <jsp:include page="navbar.jsp"/>
-<div class="modal fade" id="confirm-delete" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
-            </div>
-
-            <div class="modal-body">
-                <p>You are about to delete something. <strong>
-                    This process is irreversible.
-                </strong></p>
-                <p>Do you want to proceed?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
-            </div>
-        </div>
-    </div>
-</div>
+<jsp:include page="deleteConfirmationModal.html"/>
 
 <div class="container-fluid">
     <div>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-xs-12 col-sm-12 col-md-3">
                 <img class="img-responsive poster" src="<%= movie.getCoverUrl() %>" cross-origin="anonymous"/>
             </div>
-            <div class="col-md-8">
+            <div class="col-xs-12 col-sm-12 col-md-8">
                 <h1 class="movieTitle"><%= movie.getTitle() %>
                     <div class="rating" style="float: right"></div>
                     <small>
                         ${movie.getReleaseYear()}
-                        <c:choose>
-                            <c:when test="${movie.getIsFavorite() == true}">
-                                <a href="toggleFavorite.jsp?id=<%= id%>"><span
-                                        class="glyphicon glyphicon-star-empty active"
-                                        aria-hidden="true"
-                                        title="Remove from favorite"></span></a>
-                            </c:when>
-                            <c:when test="${movie.getIsFavorite() == false}">
-                                <a title="Add to favorite" href="toggleFavorite.jsp?id=<%= id %>"><span
-                                        class="glyphicon glyphicon-star-empty"
-                                        aria-hidden="true"></span></a>
-                            </c:when>
-                            <c:otherwise>
-                                <a title="Add to favorite" href="toggleFavorite.jsp?id=<%= id %>"><span
-                                        class="glyphicon glyphicon-star-empty"
-                                        aria-hidden="true"></span></a>
-                            </c:otherwise>
-                        </c:choose>
-                        <c:choose>
-                            <c:when test="${movie.getIsWatched() == true}">
-                                <a href="toggleIsWatched?idMovie=<%=id%>"><span class="glyphicon glyphicon-ok active"
-                                      aria-hidden="true"></span></a>
-                            </c:when>
-                            <c:when test="${movie.getIsWatched() == false}">
-                               <a href="toggleIsWatched?idMovie=<%=id%>"> <span class="glyphicon glyphicon-ok"
-                                      aria-hidden="true"></span></a>
-                            </c:when>
-                            <c:otherwise>
-                                <a> <span class="glyphicon glyphicon-ok"
-                                       aria-hidden="true"></span></a>
-                            </c:otherwise>
-                        </c:choose>
+                        <a title="Add to favorite" id="isFavorite"><span class="glyphicon glyphicon-star-empty"></span></a>
+                        <a title="Mark as watched" id="isWatched"> <span class="glyphicon glyphicon-ok"></span></a>
                     </small>
                 </h1>
                 <h3 class="movieDetails border"><%= movie.getGenre()%>
@@ -127,7 +76,7 @@
                 <br>
                 <a href="showAllMovies.jsp" class="btn btn-default" role="button">Back</a>
                 <a href="editMovie.jsp?id=<%= id %>" class="btn btn-primary" role="button">Edit</a>
-                <button class="btn btn-danger " data-href="delete.jsp?id=<%= id %>" data-toggle="modal"
+                <button class="btn btn-danger " data-href="deleteMovie.jsp?id=<%= id %>" data-toggle="modal"
                         data-target="#confirm-delete">Delete
                 </button>
             </div>
@@ -137,11 +86,15 @@
 <script type="application/javascript">
     $(function () {
 
-//        Potwierdzenie usuwania
+        if (${movie.getIsWatched()}) $(".glyphicon-ok").addClass("active");
+        if (${movie.getIsFavorite()}) $(".glyphicon-star-empty").addClass("active");
+
+//        Delete confirmation
         $("#confirm-delete").on('show.bs.modal', function (e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
         });
-//          Pobieranie danych o filmie
+
+//          Fetch movie details from 'omdbapi' api
         fetch('http://www.omdbapi.com/?t=<%= movie.getTitle()%>&y=&plot=full&r=json', {mode: 'cors'})
                 .then(function (response) {
                     return response.json();
@@ -162,9 +115,34 @@
                 .catch(function (error) {
                     log('Request failed', error)
                 });
-//        $('body').addClass("background-batman");
-    });
 
+//      toggle IsWatched and isFavorite using ajax request
+        $("#isWatched").on('click', function () {
+            $.get("toggleIsWatched", {
+                idMovie: <%=id%>
+            }, function (text) {
+                if (text == "true")  $(".glyphicon-ok").addClass("active");
+                else {
+                    $(".glyphicon-star-empty").removeClass("active");
+                    $(".glyphicon-ok").removeClass("active");
+                }
+            });
+        });
+
+        $("#isFavorite").on('click', function () {
+            $.get("toggleIsFavorite", {
+                idMovie: <%=id%>
+            }, function (text) {
+                if (text == "true") {
+                    $(".glyphicon-star-empty").addClass("active");
+                    $(".glyphicon-ok").addClass("active");
+                }
+                else {
+                    $(".glyphicon-star-empty").removeClass("active");
+                }
+            });
+        });
+    });
 </script>
 </body>
 </html>
