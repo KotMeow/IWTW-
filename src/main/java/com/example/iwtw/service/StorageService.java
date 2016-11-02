@@ -20,13 +20,6 @@ public class StorageService {
         db.add(newMovie);
     }
 
-//    public void addActor(Movie movie, String name, String role){
-//        int i = db.indexOf(movie);
-//        Movie addtoMovie = db.get(i);
-//        addtoMovie.addActor(name, role);
-//    }
-
-
     public void update(int id, Movie movie) {
         Movie updatedMovie = fixedMovie(movie);
         updatedMovie.setActors(db.get(id).getActors());
@@ -98,7 +91,7 @@ public class StorageService {
         newMovie6.addActor("Kamil Kamil", "Meow Meow");
         newMovie6.addActor("Kamil Kaaaamil", "Meow Meow");
         db.add(newMovie6);
-        Movie newMovie7 = new Movie("The Lord of the Rings", 2003, "Drama", "http://www.impawards.com/2003/posters/lord_of_the_rings_the_return_of_the_king.jpg");
+        Movie newMovie7 = new Movie("The Lord of the Rings: The Return of the King", 2003, "Drama", "http://www.impawards.com/2003/posters/lord_of_the_rings_the_return_of_the_king.jpg");
         newMovie7.addActor("Kamil Kot5", "Meow Meow");
         newMovie7.addActor("Kamil Kamil", "Meow Meow");
         newMovie7.addActor("Kamil Kaaaamil", "Meow Meow");

@@ -22,6 +22,7 @@ public class editActor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         int idMovie = Integer.parseInt(request.getParameter("idMovie"));
         int idActor = Integer.parseInt(request.getParameter("idActor"));
         String name = request.getParameter("name");

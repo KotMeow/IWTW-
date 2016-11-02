@@ -1,6 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<% %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -15,35 +14,43 @@
     <h1 id="detailsTitle">Details about your library:</h1>
 </div>
 <div class="container-fluid">
-    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
-        <div class="detailsWrapper">
-            <p class="detailsInfo">You have <strong>${all}
-            </strong>movies in your library.</p>
-            <p class="detailsInfo">And <strong>${favorite}
-            </strong> of them are your favorites.</p>
-        </div>
-        <canvas id="myChart" width="400" height="400"></canvas>
-    </div>
-    <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
-        <div class="detailsWrapper">
-            <p class="detailsInfo">Your favorite genre is: <strong>
-                ${favoriteGenre.key}
-            </strong></p>
-            <p class="detailsInfo">You have <strong>${favoriteGenre.value}
-            </strong> movies of that genre</p>
-        </div>
-        <canvas id="myChart1" width="400" height="400"></canvas>
-    </div>
-    <div class="col-md-4 details">
-        <div class="detailsWrapper">
-            <p class="detailsInfo">You have watched <strong>
-                ${watched}
-            </strong> movies</p>
-            <p class="detailsInfo">It's <strong>${watchedPercent}%
-            </strong> of your library</p>
-        </div>
-        <canvas id="myChart2" width="400" height="400"></canvas>
-    </div>
+    <c:choose>
+        <c:when test="${all > 0}">
+            <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+                <div class="detailsWrapper">
+                    <p class="detailsInfo">You have <strong>${all}
+                    </strong>movies in your library.</p>
+                    <p class="detailsInfo">And <strong>${favorite}
+                    </strong> of them are your favorites.</p>
+                </div>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+            <div class="col-md-4 details" style="border-right: solid #50A8E1 1px;">
+                <div class="detailsWrapper">
+                    <p class="detailsInfo">Your favorite genre is: <strong>
+                            ${favoriteGenre.key}
+                    </strong></p>
+                    <p class="detailsInfo">You have <strong>${favoriteGenre.value}
+                    </strong> movies of that genre</p>
+                </div>
+                <canvas id="myChart1" width="400" height="400"></canvas>
+            </div>
+            <div class="col-md-4 details">
+                <div class="detailsWrapper">
+                    <p class="detailsInfo">You have watched <strong>
+                            ${watched}
+                    </strong> movies</p>
+                    <p class="detailsInfo">It's <strong>${watchedPercent}%
+                    </strong> of your library</p>
+                </div>
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+        </c:when>
+        <c:otherwise>
+            <h2 style="text-align: center; margin-top: 50px;">Your library is empty</h2>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 
 <script type="text/javascript">

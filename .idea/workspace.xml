@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c9e4e30-deae-4165-a1c4-fd05adbaedb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/toggleIsFavorite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/toggleFavorite.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/example/iwtw/web/showFavorite.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/iwtw/WEB-INF/classes/com/example/iwtw/web/showFavorite.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/iwtw/delete.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/iwtw/favorite.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/iwtw/toggleFavorite.jsp" afterPath="" />
+    <list default="true" id="2c9e4e30-deae-4165-a1c4-fd05adbaedb8" name="Default" comment="Validation styling">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/databaseTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/addActor.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/example/iwtw/service/StorageService.class" afterPath="$PROJECT_DIR$/target/classes/com/example/iwtw/service/StorageService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw.war" afterPath="$PROJECT_DIR$/target/iwtw.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/iwtw_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/iwtw_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/WEB-INF/classes/com/example/iwtw/service/StorageService.class" afterPath="$PROJECT_DIR$/target/iwtw/WEB-INF/classes/com/example/iwtw/service/StorageService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iwtw.iml" afterPath="$PROJECT_DIR$/iwtw.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/toggleIsWatched.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/toggleIsWatched.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/details.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/details.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/editActor.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/editActor.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/imports.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/imports.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/addMovie.jsp" afterPath="$PROJECT_DIR$/target/iwtw/addMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" afterPath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/imports.jsp" afterPath="$PROJECT_DIR$/target/iwtw/imports.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" afterPath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/showAllMovies.jsp" afterPath="$PROJECT_DIR$/target/iwtw/showAllMovies.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/static/style.css" afterPath="$PROJECT_DIR$/target/iwtw/static/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showFavorite.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showDetails.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/delete.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/deleteMovie.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/favorite.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/details.jsp" />
     </list>
     <ignored path="iwtw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,21 +58,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
+      <file leaf-file-name="addActor.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addActor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="127" column="4" selection-start-line="127" selection-start-column="6" selection-end-line="128" selection-end-column="20" />
+            <state relative-caret-position="544">
+              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movieDetails.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
+      <file leaf-file-name="editActor.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/editActor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="412">
+              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addMovie.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addMovie.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="21" column="58" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -126,18 +133,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/addActor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/grade.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/sad.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addActor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/editActor.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/imports.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Movie.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/showMoviesScript.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/favorite.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d6397f00-a3b0-4994-a6f6-43b095614226/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/948a80d0-2282-422c-9b2a-0bd0f98fb8c1/console.sql" />
         <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
@@ -151,8 +151,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showFavorite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showDetails.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/bower_components/bootstrap/dist/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/imports.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/details.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/addActor.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/editActor.jsp" />
       </list>
     </option>
   </component>
@@ -228,9 +238,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +362,10 @@
               <option name="myItemId" value="iwtw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -403,6 +417,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;HSQLDB (Local)" />
     <property name="database.data.extractors.current" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\node.exe" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1453,7 +1468,9 @@
       <workItem from="1477842758305" duration="4704000" />
       <workItem from="1477928267832" duration="1265000" />
       <workItem from="1477930573965" duration="69000" />
-      <workItem from="1478005679468" duration="4931000" />
+      <workItem from="1478005679468" duration="11633000" />
+      <workItem from="1478032718576" duration="3301000" />
+      <workItem from="1478101626652" duration="7150000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor repeated code to include in jsp files and plenty of minor fixes">
       <created>1477064918737</created>
@@ -1602,11 +1619,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477786579244</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="isWatched and isFavorite is now toggled by ajax request / styling">
+      <created>1478010663873</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1478010663873</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115494000" />
+    <option name="totallyTimeSpent" value="132647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1632,11 +1656,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25568798" sideWeight="0.58742005" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16257995" sideWeight="0.49199417" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16257995" sideWeight="0.5080058" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4936034" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16257995" sideWeight="0.5050946" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1644,6 +1667,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5533049" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4936034" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1674,7 +1698,8 @@
     <MESSAGE value="IsWatched, styling, showWatched added" />
     <MESSAGE value="Details page changed" />
     <MESSAGE value="Chart of watched movies and styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chart of watched movies and styling" />
+    <MESSAGE value="isWatched and isFavorite is now toggled by ajax request / styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="isWatched and isFavorite is now toggled by ajax request / styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1693,76 +1718,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/grade.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addActor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editMovie.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/imports.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/addActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editActor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="75" column="153" selection-start-line="75" selection-start-column="75" selection-end-line="75" selection-end-column="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addMovie.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1837,14 +1792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/b92bf6bd/a9c20907-424e-4371-9e11-3367ec21d482/testdb.pet" />
     <entry file="dbDummy://dbtable:/b92bf6bd/a9c20907-424e-4371-9e11-3367ec21d482/testdb.pet" />
     <entry file="dbDummy://dbtable:/b92bf6bd/a9c20907-424e-4371-9e11-3367ec21d482/testdb.pet" />
@@ -1879,7 +1826,7 @@
         <state relative-caret-position="219">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1477843992822" expanded="true" signature="1369:1392" ph="select * fro... employees" />
           </folding>
         </state>
@@ -1893,14 +1840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/toggleFavorite.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/toggleFavorite.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/toggleIsWatched.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1909,35 +1849,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/showMoviesScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,22 +1860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1973,14 +1872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Actor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteMovie.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1989,18 +1880,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/bower_components/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3119" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="6757" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqBootstrapValidation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/imports.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="74" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/addActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="272">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editMovie.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="44" column="119" selection-start-line="44" selection-start-column="119" selection-end-line="44" selection-end-column="119" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="127" column="4" selection-start-line="127" selection-start-column="6" selection-end-line="128" selection-end-column="20" />
+        <state relative-caret-position="-1105">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addMovie.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addActor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editActor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
           <folding />
         </state>
       </provider>

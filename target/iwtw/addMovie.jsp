@@ -15,22 +15,26 @@
 <div class="container">
     <h1>Add new movie:</h1>
     <div class="col-md-8 formwrap">
-        <form class="form-horizontal" action="add.jsp">
+        <form class="form-horizontal" id="movieForm" action="add.jsp">
             <div class="form-group">
                 <label class="control-label" for="title">Title</label>
                 <input class="form-control" id="title" type="text" name="title" value="" maxlength="100" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="releaseYear">Release Year</label>
                 <input class="form-control" id="releaseYear" type="number" name="releaseYear" value="" min="1920" max="3000" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
                 <input class="form-control" id="genre" type="text" name="genre" value="" maxlength="50" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>
                 <input class="form-control" id="coverUrl" type="url" name="coverUrl" value="" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <a class="btn btn-default" href="showAllMovies.jsp">Back</a>
@@ -39,5 +43,8 @@
         </form>
     </div>
 </div>
+<script>
+    $('#movieForm').validator();
+</script>
 </body>
 </html>

@@ -21,7 +21,7 @@
     <div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3">
-                <img class="img-responsive poster" src="<%= movie.getCoverUrl() %>" cross-origin="anonymous"/>
+                <img class="img-responsive poster" src="<%= movie.getCoverUrl() %>" onerror="this.src= 'http://25.media.tumblr.com/tumblr_mdra2njUdA1r6szvzo1_1280.jpg'"/>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8">
                 <h1 class="movieTitle"><%= movie.getTitle() %>

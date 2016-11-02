@@ -22,17 +22,19 @@
 <div class="container">
     <h1>Edit actor <strong><%=actor.getName()%> </strong> who play in "<strong><%= movie.getTitle()%></strong>"</h1>
     <div class="col-md-8 formwrap">
-        <form class="form-horizontal" method="post" action="editActor">
+        <form class="form-horizontal" id="actorForm" method="post" action="editActor">
             <input type="hidden" name="idActor" value="<%=idActor %>"/>
             <input type="hidden" name="idMovie" value="<%=idMovie %>"/>
             <div class="form-group">
                 <label class="control-label" for="title">Name</label>
                 <input class="form-control" id="title" type="text" name="name" value="<%= actor.getName()%>"
                        maxlength="100" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="role">Role</label>
                 <input class="form-control" type="text" id="role" name="role" value="<%= actor.getRole()%>" required/>
+                <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <a class="btn btn-default" href="movieDetails.jsp?id=<%=idMovie%>">Back</a>
@@ -41,4 +43,7 @@
         </form>
     </div>
 </div>
+<script>
+    $('#actorForm').validator();
+</script>
 </body>
