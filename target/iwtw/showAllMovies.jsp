@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<jsp:include page="navbar.jsp"/>
 <jsp:useBean id="storage" class="com.example.iwtw.service.StorageService" scope="application"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,11 +10,12 @@
     <title>IWTW | Library</title>
 </head>
 <body>
-
+<jsp:include page="navbar.jsp"/>
 
 <div class="container-fluid">
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked">
+            <li><input id="search" name="search" type="text" class="form-control" placeholder="Search for..."></li>
             <li role="presentation" class="showAll active"><a>Show all movies!</a></li>
             <li class="showFavorite"><a>Show only favorite!</a></li>
             <li class="showWatched"><a>Show movies you watched!</a></li>
@@ -30,7 +30,7 @@
             </div>
         </c:if>
         <c:forEach items="${storage.getAllMovies()}" var="movie">
-            <c:if test="${!movie.getIsFavorite()}">
+                <c:if test="${!movie.getIsFavorite()}">
                 <span class="isFavorite">
             </c:if>
             <c:if test="${!movie.getIsWatched()}">
@@ -58,12 +58,11 @@
             </c:if>
             <c:if test="${!movie.getIsWatched()}">
                 </span>
-            </c:if>
-
-
+                </c:if>
         </c:forEach>
     </div>
 </div>
 <script src="static/showMoviesScript.js"></script>
+<script src="static/searchMoviesScript.js"></script>
 </body>
 </html>
