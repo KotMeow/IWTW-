@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c9e4e30-deae-4165-a1c4-fd05adbaedb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw.war" afterPath="$PROJECT_DIR$/target/iwtw.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" afterPath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" afterPath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/static/style.css" afterPath="$PROJECT_DIR$/target/iwtw/static/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
     </list>
     <ignored path="iwtw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,21 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadingCircle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css">
+      <file leaf-file-name="StorageService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="361">
+              <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -140,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/bower_components/bootstrap/dist/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/imports.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp" />
@@ -151,6 +135,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
       </list>
     </option>
   </component>
@@ -1493,7 +1478,7 @@
       <workItem from="1478259662954" duration="196000" />
       <workItem from="1478260368476" duration="921000" />
       <workItem from="1478293694880" duration="81000" />
-      <workItem from="1478345850614" duration="2244000" />
+      <workItem from="1478345850614" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor repeated code to include in jsp files and plenty of minor fixes">
       <created>1477064918737</created>
@@ -1670,11 +1655,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478261212086</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Loading indicator added">
+      <created>1478348109590</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1478348109590</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137139000" />
+    <option name="totallyTimeSpent" value="139020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1701,7 +1693,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33694476" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25568798" sideWeight="0.58742005" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16257995" sideWeight="0.49199417" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1401919" sideWeight="0.49199417" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16257995" sideWeight="0.5080058" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16257995" sideWeight="0.5050946" order="5" side_tool="true" content_ui="tabs" />
@@ -1746,7 +1738,8 @@
     <MESSAGE value="Validation styling" />
     <MESSAGE value="Bower components" />
     <MESSAGE value="Fixed isWatched in editing Movie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed isWatched in editing Movie" />
+    <MESSAGE value="Loading indicator added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loading indicator added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1915,14 +1908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -2003,24 +1988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1201#1202#0" expanded="false" />
-            <element signature="e#1250#1251#0" expanded="false" />
-            <element signature="e#1284#1285#0" expanded="false" />
-            <element signature="e#1313#1314#0" expanded="false" />
-            <element signature="e#1369#1370#0" expanded="false" />
-            <element signature="e#1428#1429#0" expanded="false" />
-            <element signature="e#1995#1996#0" expanded="false" />
-            <element signature="e#2020#2021#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/editMovie.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -2069,6 +2036,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2108">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -2077,10 +2052,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/domain/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="-68">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
           <folding />
         </state>
       </provider>
