@@ -1,0 +1,36 @@
+{
+  "name": "cssspinners",
+  "version": "0.0.1",
+  "authors": [
+    "boguz <luis_bento@hotmail.com>"
+  ],
+  "description": "css spinners made easy",
+  "main": "scripts/spinners.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "spinner",
+    "loading",
+    "css loading spinner"
+  ],
+  "license": "MIT",
+  "homepage": "https://boguz.github.io/Spinners",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "ba48d66408438a40e61a7682f616fc1266738c06"
+  },
+  "_source": "https://github.com/boguz/Spinners.git",
+  "_target": "^0.0.1",
+  "_originalSource": "cssspinners",
+  "_direct": true
+}
