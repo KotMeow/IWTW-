@@ -1,0 +1,49 @@
+.spinningCircle {
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0);
+    border-top-color: 4px solid #50A8E1;
+    border-right-color: 4px solid #50A8E1;
+    -webkit-animation: single2 4s infinite linear;
+    animation: single2 4s infinite linear;
+}
+
+@-webkit-keyframes single2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border-top-color: #50A8E1;
+        border-right-color: #50A8E1;
+    }
+    50% {
+        border-top-color: #2D6998;
+        border-right-color: #2D6998;
+    }
+    100% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+        border-top-color: #50A8E1;
+        border-right-color: #50A8E1;
+    }
+}
+
+@keyframes single2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        border-top-color: #50A8E1;
+        border-right-color: #50A8E1;
+    }
+    50% {
+        border-top-color: #2D6998;
+        border-right-color: #2D6998;
+    }
+    100% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+        border-top-color: #50A8E1;
+        border-right-color: #50A8E1;
+    }
+}

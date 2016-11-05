@@ -10,6 +10,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <jsp:include page="imports.jsp"/>
+    <link rel="stylesheet" href="static/loadingCircle.css">
     <title>IWTW | <%=movie.getTitle()%>
     </title>
 </head>
@@ -35,7 +36,8 @@
                 <h3 class="movieDetails border"><%= movie.getGenre()%>
                 </h3>
                 <%--<h2 style="margin-top: 20px;">Plot:</h2>--%>
-                <p class="plot" style="font-size: large"></p>
+                <div class="spinningCircle"></div>
+                <p class="plot hidden" style="font-size: large"></p>
                 <h4 class="awards"></h4>
                 <table style="margin-top: 30px;" class="table table-hover">
                     <tr>
@@ -101,11 +103,13 @@
                 })
                 .then(function (text) {
                     if (text.Error) {
-                        $('.plot').append(text.Error);
+                        $('.spinningCircle').addClass('hidden');
+                        $('.plot').removeClass('hidden').append(text.Error);
                         $('.rating').append('?/10');
                     }
                     else {
-                        $('.plot').append(text.Plot);
+                        $('.spinningCircle').addClass('hidden');
+                        $('.plot').removeClass('hidden').append(text.Plot);
                         $('.awards').append("Awards: " + text.Awards + '  ');
                         $('.rating').append(text.imdbRating + '/10');
                         $('.border').prepend(text.Runtime + ", ");

@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c9e4e30-deae-4165-a1c4-fd05adbaedb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw.war" afterPath="$PROJECT_DIR$/target/iwtw.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" afterPath="$PROJECT_DIR$/target/iwtw/editMovie.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" afterPath="$PROJECT_DIR$/target/iwtw/movieDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/iwtw/static/style.css" afterPath="$PROJECT_DIR$/target/iwtw/static/style.css" />
     </list>
     <ignored path="iwtw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,51 +44,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addActor.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/addActor.jsp">
+      <file leaf-file-name="movieDetails.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+            <state relative-caret-position="293">
+              <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editActor.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/editActor.jsp">
+      <file leaf-file-name="loadingCircle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+            <state relative-caret-position="680">
+              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editMovie.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/editMovie.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addMovie.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/addMovie.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="58" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="58" />
+            <state relative-caret-position="34">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -99,6 +84,7 @@
         <option value="JavaScript File" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -152,18 +138,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showFavorite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/showDetails.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/deleteConfirmationModal.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/bower_components/bootstrap/dist/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/web/editActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/iwtw/service/StorageService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/imports.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/showAllMovies.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/details.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/addActor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/editActor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/style.css" />
       </list>
     </option>
   </component>
@@ -239,9 +226,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -430,6 +416,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,6 +436,7 @@
     <property name="database.data.extractors.current" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\node.exe" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1503,7 +1491,9 @@
       <workItem from="1478032718576" duration="3301000" />
       <workItem from="1478101626652" duration="8200000" />
       <workItem from="1478259662954" duration="196000" />
-      <workItem from="1478260368476" duration="813000" />
+      <workItem from="1478260368476" duration="921000" />
+      <workItem from="1478293694880" duration="81000" />
+      <workItem from="1478345850614" duration="2244000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor repeated code to include in jsp files and plenty of minor fixes">
       <created>1477064918737</created>
@@ -1673,11 +1663,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478109492799</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixed isWatched in editing Movie">
+      <created>1478261212086</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1478261212086</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134706000" />
+    <option name="totallyTimeSpent" value="137139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1748,7 +1745,8 @@
     <MESSAGE value="isWatched and isFavorite is now toggled by ajax request / styling" />
     <MESSAGE value="Validation styling" />
     <MESSAGE value="Bower components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bower components" />
+    <MESSAGE value="Fixed isWatched in editing Movie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed isWatched in editing Movie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1767,41 +1765,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="149" column="8" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5f785be1-69a8-487f-af3c-5b88b90752db/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7f738019-4982-41d4-aa33-9cd1fd9ca108/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/02f5bf0a-e1b5-4e8f-9cd5-2af53e583495/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d6397f00-a3b0-4994-a6f6-43b095614226/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/948a80d0-2282-422c-9b2a-0bd0f98fb8c1/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1992,14 +1955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/details.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -2021,13 +1976,6 @@
         <state relative-caret-position="472">
           <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -2059,14 +2007,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1284#1285#0" expanded="false" />
+            <element signature="e#1313#1314#0" expanded="false" />
+            <element signature="e#1369#1370#0" expanded="false" />
+            <element signature="e#1428#1429#0" expanded="false" />
+            <element signature="e#1995#1996#0" expanded="false" />
+            <element signature="e#2020#2021#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/editMovie.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="374">
           <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/bower_components/cssspinners/content/multiple1_css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/bower_components/cssspinners/content/multiple1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/bower_components/cssspinners/content/spinner2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/bower_components/cssspinners/content/spinner2_css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="48" column="5" selection-start-line="1" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/loadingCircle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/movieDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="110" column="24" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -22,6 +22,7 @@
         <form class="form-horizontal" id="movieForm" action="edit.jsp">
             <input type="hidden" name="id" value="<%=id %>"/>
             <input type="hidden" name="isFavorite" value="<%=movie.getIsFavorite()%>"/>
+            <input type="hidden" name="isWatched" value="<%=movie.getIsWatched()%>"/>
             <div class="form-group">
                 <label class="control-label" for="title">Title</label>
                 <input class="form-control" id="title" type="text" name="title" value="<%= movie.getTitle()%>"
