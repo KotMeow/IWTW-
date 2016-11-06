@@ -20,30 +20,30 @@
     <h1>Edit information about "<strong><%= movie.getTitle() %></strong>"</h1>
     <div class="col-md-8 formwrap">
         <form class="form-horizontal" id="movieForm" action="edit.jsp">
-            <input type="hidden" name="id" value="<%=id %>"/>
-            <input type="hidden" name="isFavorite" value="<%=movie.getIsFavorite()%>"/>
-            <input type="hidden" name="isWatched" value="<%=movie.getIsWatched()%>"/>
+            <input type="hidden" name="id" value="<%=id %>">
+            <input type="hidden" name="isFavorite" value="<%=movie.getIsFavorite()%>">
+            <input type="hidden" name="isWatched" value="<%=movie.getIsWatched()%>">
             <div class="form-group">
                 <label class="control-label" for="title">Title</label>
                 <input class="form-control" id="title" type="text" name="title" value="<%= movie.getTitle()%>"
-                       maxlength="100" required/>
+                       maxlength="100" required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="releaseYear">Release Year</label>
                 <input class="form-control" id="releaseYear" type="number" name="releaseYear" value="<%= movie.getReleaseYear()%>"
-                       min="1920" max="3000" required/>
+                       min="1920" max="3000" required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="genre">Genre</label>
                 <input class="form-control" id="genre" type="text" name="genre" value="<%= movie.getGenre()%>" maxlength="50"
-                       required/>
+                       required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
                 <label class="control-label" for="coverUrl">Picture url</label>
-                <input class="form-control" id="coverUrl" type="url" name="coverUrl" value="<%= movie.getCoverUrl()%>" required/>
+                <input class="form-control" id="coverUrl" type="url" name="coverUrl" value="<%= movie.getCoverUrl()%>" required>
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

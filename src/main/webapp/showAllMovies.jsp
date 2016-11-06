@@ -37,8 +37,8 @@
                 <span class="isWatched">
             </c:if>
             <a href="movieDetails.jsp?id=${storage.getAllMovies().indexOf(movie)}">
-                <div class="item" style="background-image: url('${movie.getCoverUrl()}')">
-                    <div class="overlay">
+                <span class="item" style="background-image: url('${movie.getCoverUrl()}')">
+                    <span class="overlay">
                         <span class="item-header">${movie.getTitle()}</span>
                         <c:choose>
                             <c:when test="${movie.getIsFavorite()}">
@@ -49,16 +49,15 @@
                             </c:when>
                         </c:choose>
 
-                    </div>
-                </div>
-
+                    </span>
+                </span>
             </a>
             <c:if test="${!movie.getIsFavorite()}">
                 </span>
             </c:if>
             <c:if test="${!movie.getIsWatched()}">
                 </span>
-                </c:if>
+            </c:if>
         </c:forEach>
     </div>
 </div>

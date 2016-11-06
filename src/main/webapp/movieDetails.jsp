@@ -22,11 +22,11 @@
     <div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-3">
-                <img class="img-responsive poster" src="<%= movie.getCoverUrl() %>" onerror="this.src= 'http://25.media.tumblr.com/tumblr_mdra2njUdA1r6szvzo1_1280.jpg'"/>
+                <img class="img-responsive poster" alt="poster" src="<%= movie.getCoverUrl() %>" onerror="this.src= 'http://25.media.tumblr.com/tumblr_mdra2njUdA1r6szvzo1_1280.jpg'">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8">
                 <h1 class="movieTitle"><%= movie.getTitle() %>
-                    <div class="rating" style="float: right"></div>
+                    <span class="rating" style="float: right"></span>
                     <small>
                         ${movie.getReleaseYear()}
                         <a title="Add to favorite" id="isFavorite"><span class="glyphicon glyphicon-star-empty"></span></a>
@@ -39,13 +39,13 @@
                 <div class="spinningCircle"></div>
                 <p class="plot hidden" style="font-size: large"></p>
                 <h4 class="awards"></h4>
+                <h2 style="margin-top: 50px;">Cast:</h2>
                 <table style="margin-top: 30px;" class="table table-hover">
                     <tr>
-                        <th><h5 style="font-size: larger"><strong>Name</strong></h5></th>
-                        <th><h5 style="font-size: larger"><strong>Role</strong></h5></th>
+                        <th style="font-size: larger"><strong>Name</strong></th>
+                        <th style="font-size: larger"><strong>Role</strong></th>
                         <th></th>
                     </tr>
-                    <h2 style="margin-top: 50px;">Cast:</h2>
                     <c:forEach items="${ movie.getActors()}" var="actor" varStatus="loop">
                         <tr>
 
@@ -54,10 +54,10 @@
                             <td>
                                 <a title="Edit user"
                                    href="editActor.jsp?idActor=<%=movie.getActors().indexOf(pageContext.getAttribute("actor"))%>&idMovie=<%=id%>"
-                                   type="button" class="btn btn-default btn-sm">
+                                   class="btn btn-default btn-sm">
                                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                                 </a>
-                                <button type="button" class="btn btn-default btn-sm"
+                                <button class="btn btn-default btn-sm"
                                         data-href="deleteActor.jsp?idActor=<%=movie.getActors().indexOf(pageContext.getAttribute("actor"))%>&idMovie=<%=id%>"
                                         data-toggle="modal"
                                         data-target="#confirm-delete"
@@ -69,7 +69,7 @@
 
                     </c:forEach>
                     <tr>
-                        <td><a href="addActor.jsp?id=<%=id%>" title="Add new actor" type="button"
+                        <td><a href="addActor.jsp?id=<%=id%>" title="Add new actor"
                                class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span></a></td>
                         <td></td>
                         <td></td>
